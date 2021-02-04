@@ -1,0 +1,19 @@
+{
+  "name": "cra-template-webdevshop-webapp",
+  "version": "1.0.1",
+  "description": "> TODO: description",
+  "author": "femi adeniyi <femi@webdeveloper.shop>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/cra-template-webdevshop-webapp.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  }
+}
