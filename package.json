@@ -2,6 +2,7 @@
   "name": "root",
   "private": true,
   "scripts": {
+    "lerna-publish": "lerna publish --conventional-commits",
     "prepublish": "terraform init && terraform apply -auto-approve"
   },
   "repository": {
