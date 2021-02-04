@@ -1,19 +1,22 @@
 {
-  "name": "cra-template-webdevshop-webapp",
+  "name": "@webdevshop/cra-template-webdevshop-webapp",
   "version": "1.0.1",
   "description": "> TODO: description",
   "author": "femi adeniyi <femi@webdeveloper.shop>",
   "homepage": "",
-  "license": "ISC",
-  "main": "lib/cra-template-webdevshop-webapp.js",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
-  },
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "create-react-app",
+    "template",
+    "typescript"
+  ],
   "files": [
-    "lib"
+    "template",
+    "template.json"
   ],
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
-  }
+  },
+  "gitHead": "7633a2ce7e52d2f6a306496a2ce1634d44bba344"
 }
