@@ -27,47 +27,57 @@ export function BusinessHeaderContainer(){
                 </Col>
             </Row>
             <Row className="justify-content-center">
-                <Col lg={3} className="p-0">
-                    <Card border="light">
-                        <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
-                            <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
-                            <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of
-                                the card's content.
-                            </Card.Text>
-                            <Card.Link href="#">Card Link</Card.Link>
-                            <Card.Link href="#">Another Link</Card.Link>
-                        </Card.Body>
-                    </Card>
-                </Col>
-                <Col lg={3} className="p-0">
-                    <Card border="light">
-                        <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
-                            <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
-                            <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of
-                                the card's content.
-                            </Card.Text>
-                            <Card.Link href="#">Card Link</Card.Link>
-                            <Card.Link href="#">Another Link</Card.Link>
-                        </Card.Body>
-                    </Card>
-                </Col>
-                <Col lg={3} className="p-0">
-                    <Card border="light">
-                        <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
-                            <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
-                            <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of
-                                the card's content.
-                            </Card.Text>
-                            <Card.Link href="#">Card Link</Card.Link>
-                            <Card.Link href="#">Another Link</Card.Link>
-                        </Card.Body>
-                    </Card>
+                <Col lg={9}>
+                    <Row>
+                        <Card>
+                            <Card.Body>
+                                <Row className="justify-content-center">
+                                    <Col lg={3} className="p-0">
+                                        <Card border="light" as="a">
+                                            <Card.Body>
+                                                <Card.Title>Card Title</Card.Title>
+                                                <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
+                                                <Card.Text>
+                                                    Some quick example text to build on the card title and make up the bulk of
+                                                    the card's content.
+                                                </Card.Text>
+
+                                            </Card.Body>
+                                        </Card>
+                                    </Col>
+                                    <Col lg={3} className="p-0">
+                                        <Card border="light">
+                                            <Card.Body>
+                                                <Card.Title>Card Title</Card.Title>
+                                                <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
+                                                <Card.Text>
+                                                    Some quick example text to build on the card title and make up the bulk of
+                                                    the card's content.
+                                                </Card.Text>
+
+                                            </Card.Body>
+                                        </Card>
+                                    </Col>
+                                    <Col lg={3} className="p-0">
+                                        <Card border="light">
+                                            <Card.Body>
+                                                <Card.Title>Card Title</Card.Title>
+                                                <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
+                                                <Card.Text>
+                                                    Some quick example text to build on the card title and make up the bulk of
+                                                    the card's content.
+                                                </Card.Text>
+
+                                            </Card.Body>
+                                        </Card>
+                                    </Col>
+                                </Row>
+
+
+                            </Card.Body>
+                        </Card>
+
+                    </Row>
                 </Col>
 
             </Row>
