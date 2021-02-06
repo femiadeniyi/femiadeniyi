@@ -1,5 +1,5 @@
 {
-  "name": "root",
+  "name": "@webdevshop/webdevshop",
   "private": true,
   "scripts": {
     "lerna-publish": "lerna publish --conventional-commits",
@@ -7,9 +7,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/webdevshop/webdevshop-lerna.git"
+    "url": "https://github.com/webdevshop/webdevshop.git"
   },
   "devDependencies": {
     "lerna": "^3.22.1"
+  },
+  "dependencies": {
+    "nyc": "^15.1.0"
   }
 }

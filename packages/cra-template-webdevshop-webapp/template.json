@@ -3,8 +3,6 @@
     "dependencies": {
       "bootstrap": "^4.5.3",
       "change-case": "^4.1.2",
-      "firebase": "^8.2.2",
-      "firebaseui": "^4.7.1",
       "react-router-dom": "^5.2.0",
       "react-bootstrap": "^1.4.3",
       "uuid": "^8.3.2",

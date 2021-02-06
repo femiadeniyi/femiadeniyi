@@ -34,6 +34,6 @@ provider "google-beta" {
 */
 
 resource "github_repository" "repo" {
-  name        = "webdevshop-lerna"
+  name        = "webdevshop"
   visibility  = "public"
 }
