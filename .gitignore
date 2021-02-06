@@ -37,3 +37,7 @@ terraform.rc
 
 node_modules
 variables.tf
+
+.idea
+
+.env
