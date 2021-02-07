@@ -2,8 +2,12 @@
   "name": "@webdevshop/webdevshop",
   "private": true,
   "scripts": {
+    "read": "npm run script -f Hell",
     "lerna-publish": "lerna publish --conventional-commits",
-    "prepublish": "terraform init && terraform apply -auto-approve"
+    "prepublish": "terraform init && terraform apply -auto-approve",
+    "cmd": "cross-env TS_NODE_COMPILER_OPTIONS={\\\"module\\\":\\\"commonjs\\\"} LERNA_ROOT_PATH=C:\\Software\\webdevshop-lerna lerna exec --parallel -- ts-node $LERNA_ROOT_PATH/scripts/index.ts",
+    "tsc": "lerna exec --ignore @webdevshop/cra-template-webdevshop-webapp -- tsc",
+    "del": "lerna exec del-cli dist"
   },
   "repository": {
     "type": "git",
@@ -13,6 +17,12 @@
     "lerna": "^3.22.1"
   },
   "dependencies": {
-    "nyc": "^15.1.0"
+    "@types/fs-extra": "^9.0.6",
+    "commander": "^7.0.0",
+    "cross-env": "^7.0.3",
+    "del-cli": "^3.0.1",
+    "fs-extra": "^9.1.0",
+    "nyc": "^15.1.0",
+    "yargs": "^16.2.0"
   }
 }
