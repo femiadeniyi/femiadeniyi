@@ -20,6 +20,7 @@
     "web-vitals": "^1.1.0"
   },
   "scripts": {
+    "sonar": "sonar-scanner",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -42,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
   }
 }

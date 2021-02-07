@@ -41,3 +41,5 @@ variables.tf
 .idea
 
 .env
+
+sonar-project.properties

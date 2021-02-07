@@ -1,0 +1,7 @@
+organization=webdevshop
+projectKey=webdevshop_component-header-business
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.17032
+dashboardUrl=https://sonarcloud.io/dashboard?id=webdevshop_component-header-business
+ceTaskId=AXd9E_FZv0sOXfipNEys
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXd9E_FZv0sOXfipNEys
