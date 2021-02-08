@@ -8,7 +8,7 @@
     "packages:tsc": "lerna exec --ignore cra-template-femi -- tsc",
     "packages:publish-setup": "lerna exec -- npm publish --access public",
     "packages:clean": "lerna exec del-cli dist",
-    "prepublish": "npm run packages:tsc && concurrently \"terraform init && terraform apply -auto-approve\" \"npm run packages:scripts\""
+    "prepublish": "concurrently \"terraform init && terraform apply -auto-approve\" \"npm run packages:scripts\" && npm run packages:tsc"
   },
   "repository": {
     "type": "git",

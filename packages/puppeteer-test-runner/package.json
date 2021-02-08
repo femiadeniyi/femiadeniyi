@@ -1,5 +1,5 @@
 {
-  "name": "electron-test-runner",
+  "name": "puppeteer-test-runner",
   "version": "0.2.2",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
@@ -52,5 +52,5 @@
     "cross-env": "^7.0.3"
   },
   "main": "dist/index.js",
-  "gitHead": "4aca95c80b80dd30cea83ff2891e93f47490ed7a"
+  "gitHead": "b794ba8670cafa3213f6c12b60976089fd9a5d27"
 }

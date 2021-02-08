@@ -1,14 +1,12 @@
-0 silly argv {
-0 silly argv   _: [ 'add' ],
-0 silly argv   dev: true,
-0 silly argv   D: true,
-0 silly argv   globs: [ 'packages/components' ],
-0 silly argv   lernaVersion: '3.22.1',
-0 silly argv   '$0': 'node_modules\\lerna\\cli.js',
-0 silly argv   pkg: 'react-spring@9'
-0 silly argv }
-1 notice cli v3.22.1
-2 verbose rootPath C:\Software\webdevshop-lerna
-3 error react-spring: No matching version found for react-spring@9.
-3 error     at pickManifest (C:\Software\webdevshop-lerna\node_modules\npm-pick-manifest\index.js:122:13)
-3 error     at C:\Software\webdevshop-lerna\node_modules\@evocateur\pacote\lib\fetchers\registry\manifest.js:43:18
+15 error Error: Command failed: git remote update
+15 error fatal: unable to access 'https://github.com/webdevshop/webdevshop.git/': Could not resolve host: github.com
+15 error error: Could not fetch origin
+15 error
+15 error Fetching origin
+15 error
+15 error     at makeError (C:\Software\webdevshop-lerna\node_modules\execa\index.js:174:9)
+15 error     at Function.module.exports.sync (C:\Software\webdevshop-lerna\node_modules\execa\index.js:338:15)
+15 error     at Object.execSync (C:\Software\webdevshop-lerna\node_modules\@lerna\child-process\index.js:26:16)
+15 error     at updateRemote (C:\Software\webdevshop-lerna\node_modules\@lerna\version\lib\is-behind-upstream.js:26:16)
+15 error     at isBehindUpstream (C:\Software\webdevshop-lerna\node_modules\@lerna\version\lib\is-behind-upstream.js:11:3)
+15 error     at VersionCommand.initialize (C:\Software\webdevshop-lerna\node_modules\@lerna\version\index.js:154:9)

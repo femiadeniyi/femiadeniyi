@@ -57,5 +57,5 @@
   "devDependencies": {
     "babel-plugin-istanbul": "^6.0.0"
   },
-  "gitHead": "4aca95c80b80dd30cea83ff2891e93f47490ed7a"
+  "gitHead": "b794ba8670cafa3213f6c12b60976089fd9a5d27"
 }
