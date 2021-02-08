@@ -10,3 +10,9 @@ export interface Puppeteer2MethodProps {
     // helpers: Awaited<ReturnType<typeof createPuppeteer2Helpers>>
     getCode?: () => Promise<string>
 }
+
+export function createPuppeteerTest(f:(props:Puppeteer2MethodProps) => Promise<any>){
+    return f
+}
+
+export default createPuppeteerTest

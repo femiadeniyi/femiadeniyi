@@ -10,6 +10,7 @@
         "@types/react": "^17.0.1",
         "@types/react-dom": "^17.0.0",
         "babel-plugin-istanbul": "^6.0.0",
+        "concurrently": "^5.3.0",
         "craco": "0.0.3",
         "electron": "^11.2.3",
         "nyc": "^15.1.0",
@@ -22,7 +23,8 @@
         "web-vitals": "^1.1.0"
     },
     "scripts": {
-        "open": "cross-env TS_NODE_COMPILER_OPTIONS={\\\"module\\\":\\\"commonjs\\\"} ts-node src/index.ts",
+        "start:all": "concurrently \"npm start\" \"npm run start:electron\" ",
+        "start:electron": "cross-env TS_NODE_COMPILER_OPTIONS={\\\"module\\\":\\\"commonjs\\\"} ts-node src/main.ts",
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",

@@ -1,4 +1,5 @@
 import {app, BrowserWindow, dialog, Menu} from 'electron'
+import {importConfig} from "./helpers";
 
 async function createWindow () {
     const win = new BrowserWindow({
@@ -9,8 +10,9 @@ async function createWindow () {
             nodeIntegration: true,
         },
     })
+    const config = await importConfig()
 
-    await win.loadURL("http://localhost:4099")
+    await win.loadURL(config.tests.url)
 }
 
 
