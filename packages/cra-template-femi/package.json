@@ -18,6 +18,6 @@
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
-  "gitHead": "b794ba8670cafa3213f6c12b60976089fd9a5d27",
+  "gitHead": "afa5608a20e9a45cabd526b5bbbf47c74d46cc87",
   "main": "dist/index.js"
 }

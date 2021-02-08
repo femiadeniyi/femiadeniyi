@@ -1,7 +1,7 @@
 terraform {
   backend "gcs" {
-    bucket  = "webdevshop-terraform-state"
-    prefix  = "webdevshop-lerna"
+    bucket  = "terraform-state-877"
+    prefix  = "state-tf"
   }
   required_providers {
     github = {
@@ -21,7 +21,7 @@ terraform {
 
 provider "github" {
   token = var.GH
-  owner = "webdevshop"
+  owner = "femiadeniyi"
 }
 
 provider "google-beta" {
@@ -34,6 +34,6 @@ provider "google-beta" {
 */
 
 resource "github_repository" "repo" {
-  name        = "webdevshop"
+  name        = "femiadeniyi"
   visibility  = "public"
 }
