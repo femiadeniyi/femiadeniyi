@@ -1,5 +1,5 @@
 {
-  "name": "electron-test-runner",
+  "name": "helpful-react-components",
   "version": "0.2.1",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
@@ -9,26 +9,23 @@
     "@types/node": "^12.19.16",
     "@types/react": "^17.0.1",
     "@types/react-dom": "^17.0.0",
-    "babel-plugin-istanbul": "^6.0.0",
-    "concurrently": "^5.3.0",
-    "craco": "0.0.3",
-    "electron": "^11.2.3",
-    "nyc": "^15.1.0",
-    "puppeteer": "^7.0.1",
+    "bootstrap": "^4.6.0",
     "react": "^17.0.1",
+    "react-bootstrap": "^1.4.3",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.2",
-    "ts-node": "^9.1.1",
+    "react-spring": "^9.0.0-rc.3",
     "typescript": "^4.1.3",
     "web-vitals": "^1.1.0"
   },
   "scripts": {
-    "start:all": "concurrently \"npm start\" \"npm run start:electron\" ",
-    "start:electron": "cross-env TS_NODE_COMPILER_OPTIONS={\\\"module\\\":\\\"commonjs\\\"} ts-node src/main.ts",
+    "sonar": "sonar-scanner",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": [
@@ -49,6 +46,12 @@
     ]
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^6.1.17",
+    "@storybook/addon-essentials": "^6.1.17",
+    "@storybook/addon-links": "^6.1.17",
+    "@storybook/node-logger": "^6.1.17",
+    "@storybook/preset-create-react-app": "^3.1.5",
+    "@storybook/react": "^6.1.17",
     "cross-env": "^7.0.3"
   },
   "main": "dist/index.js",

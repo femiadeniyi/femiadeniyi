@@ -1,7 +1,9 @@
 {
   "exclude": [
     "**/craco.config.js",
-    "./dist"
+    "./dist",
+    "**/*.test.tsx",
+    "**/*.test.ts"
   ],
   "compilerOptions": {
     "target": "es5",

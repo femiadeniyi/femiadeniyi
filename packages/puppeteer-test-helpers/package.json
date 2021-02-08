@@ -1,0 +1,33 @@
+{
+  "name": "puppeteer-test-helpers",
+  "version": "0.2.1",
+  "description": "> TODO: description",
+  "author": "femi adeniyi <femi@webdeveloper.shop>",
+  "homepage": "https://github.com/webdevshop/webdevshop-lerna#readme",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webdevshop/webdevshop-lerna.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/webdevshop/webdevshop-lerna/issues"
+  },
+  "devDependencies": {
+    "typescript": "^4.1.3"
+  },
+  "dependencies": {
+    "@types/puppeteer": "^5.4.3"
+  },
+  "gitHead": "4aca95c80b80dd30cea83ff2891e93f47490ed7a"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "cra-template-femi",
+  "version": "0.2.1",
+  "description": "> TODO: description",
+  "author": "femi adeniyi <femi@webdeveloper.shop>",
+  "homepage": "",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "create-react-app",
+    "template",
+    "typescript"
+  ],
+  "files": [
+    "template",
+    "template.json"
+  ],
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "gitHead": "4aca95c80b80dd30cea83ff2891e93f47490ed7a",
+  "main": "dist/index.js"
+}

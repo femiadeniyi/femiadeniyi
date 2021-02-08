@@ -5,7 +5,8 @@
     "read": "npm run script -f Hell",
     "packages:publish": "lerna publish --conventional-commits",
     "packages:scripts": "cross-env TS_NODE_COMPILER_OPTIONS={\\\"module\\\":\\\"commonjs\\\"} LERNA_ROOT_PATH=C:\\Software\\webdevshop-lerna lerna exec --parallel -- ts-node $LERNA_ROOT_PATH/scripts/index.ts",
-    "packages:tsc": "lerna exec --ignore @webdevshop/cra-template-webdevshop-webapp -- tsc",
+    "packages:tsc": "lerna exec --ignore cra-template-femi -- tsc",
+    "packages:publish-setup": "lerna exec -- npm publish --access public",
     "packages:clean": "lerna exec del-cli dist",
     "prepublish": "npm run packages:tsc && concurrently \"terraform init && terraform apply -auto-approve\" \"npm run packages:scripts\""
   },
