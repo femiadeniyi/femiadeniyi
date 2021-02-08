@@ -25,5 +25,6 @@
     },
     "dependencies": {
         "@types/puppeteer": "^5.4.3"
-    }
+    },
+    "gitHead": "9dfea51aa359e7922fb83eeb11fdfae186d9492d"
 }

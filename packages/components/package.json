@@ -68,5 +68,6 @@
         "react-spring": "9.0.0-rc.3",
         "webpack": "4.44.2"
     },
-    "main": "dist/index.js"
+    "main": "dist/index.js",
+    "gitHead": "9dfea51aa359e7922fb83eeb11fdfae186d9492d"
 }
