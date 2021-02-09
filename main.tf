@@ -16,7 +16,7 @@ terraform {
 }
 
 /*
-  PROVIDERS
+  PROVIDERS.
 */
 
 provider "github" {
