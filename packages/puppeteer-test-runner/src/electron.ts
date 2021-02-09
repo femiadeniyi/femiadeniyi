@@ -1,5 +1,13 @@
 import {app, BrowserWindow, dialog, Menu} from 'electron'
-import {importConfig} from "./helpers";
+import {importConfig} from "./importConfig";
+// import yargs from "yargs";
+//
+// const argv = yargs(process.argv.slice(2)).option('port', {
+//     string: true,
+//     demandOption: true
+// }).argv;
+//
+// console.log(argv)
 
 async function createWindow () {
     const win = new BrowserWindow({
