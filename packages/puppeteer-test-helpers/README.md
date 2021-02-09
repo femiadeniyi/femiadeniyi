@@ -1,11 +1,11 @@
-# `puppeteer-helpers`
+# `puppeteer-createHelpers`
 
 > TODO: description
 
 ## Usage
 
 ```
-const puppeteerHelpers = require('puppeteer-helpers');
+const puppeteerHelpers = require('puppeteer-createHelpers');
 
 // TODO: DEMONSTRATE API
 ```

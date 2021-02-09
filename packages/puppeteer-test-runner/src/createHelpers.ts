@@ -8,7 +8,7 @@ interface PuppeteerHelperProps {
     page: Page
 }
 
-export async function helpers({page}:PuppeteerHelperProps){
+export async function createHelpers({page}:PuppeteerHelperProps){
     return ({
         async delay(time?:number){
             await page.waitForTimeout(time || 1000)
@@ -65,4 +65,4 @@ export async function helpers({page}:PuppeteerHelperProps){
     })
 }
 
-export default helpers
+export default createHelpers

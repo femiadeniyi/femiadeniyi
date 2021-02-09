@@ -2,6 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 
+window.puppeteer = {
+    page:null,
+    browser:null,
+}
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

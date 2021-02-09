@@ -37,7 +37,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * **electron-test-runner:** init ([2a6ba27](https://github.com/webdevshop/webdevshop/commit/2a6ba2765dc853c89a686d2416bf9fdef4c7be12))
 * **lerna:** refactoring! ([6977603](https://github.com/webdevshop/webdevshop/commit/697760324ef6ea104f6bfc013c7187595cf665e6))
 * **puppeteer:** improving ([4ef8da9](https://github.com/webdevshop/webdevshop/commit/4ef8da922c4297c6cb3d6d4a2d93401729558cef))
-* **WDS-4:** publish to import helpers ([48c32c5](https://github.com/webdevshop/webdevshop/commit/48c32c516efc3f1a6c0d39df3d31f0ed95dd22e6))
+* **WDS-4:** publish to import createHelpers ([48c32c5](https://github.com/webdevshop/webdevshop/commit/48c32c516efc3f1a6c0d39df3d31f0ed95dd22e6))
 
 
 
