@@ -2,8 +2,8 @@
   "name": "cra-template-femi",
   "version": "0.2.8",
   "description": "> TODO: description",
-  "author": "femi adeniyi <femi@webdeveloper.shop>",
-  "homepage": "",
+  "author": "femi adeniyi <dev@femiadeniyi.com>",
+  "homepage": "https://github.com/femiadeniyi/femiadeniyi#readme",
   "license": "MIT",
   "keywords": [
     "react",
@@ -19,5 +19,13 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "gitHead": "ae03388c7832f0c6551439664e16402bd45b0640",
-  "main": "dist/index.js"
+  "main": "dist/index.js",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/femiadeniyi/femiadeniyi"
+  },
+  "bugs": {
+    "url": "https://github.com/femiadeniyi/femiadeniyi/issues"
+  }
 }

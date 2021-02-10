@@ -63,5 +63,15 @@
     "cross-env": "^7.0.3"
   },
   "main": "dist/index.js",
-  "gitHead": "ae03388c7832f0c6551439664e16402bd45b0640"
+  "gitHead": "ae03388c7832f0c6551439664e16402bd45b0640",
+  "private": false,
+  "author": "femi adeniyi <dev@femiadeniyi.com>",
+  "homepage": "https://github.com/femiadeniyi/femiadeniyi#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/femiadeniyi/femiadeniyi"
+  },
+  "bugs": {
+    "url": "https://github.com/femiadeniyi/femiadeniyi/issues"
+  }
 }

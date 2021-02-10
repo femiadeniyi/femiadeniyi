@@ -1,1 +1,0 @@
-export {BusinessHeader} from "./stories/BusinessHeader"

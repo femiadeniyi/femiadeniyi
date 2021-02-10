@@ -26,7 +26,7 @@ function setPackageJson(){
             "url": "https://github.com/femiadeniyi/femiadeniyi/issues"
         }
     }
-    fs.writeJSON("package.json",{...packageJson, main:"dist/index.js"},{spaces:2})
+    fs.writeJSON("package.json",{...newPackageJson, main:"dist/index.js"},{spaces:2})
     console.log("set package.json")
     return packageJson
 }
