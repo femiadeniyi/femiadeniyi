@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/webdevshop/webdevshop-lerna/issues"
   },
-  "gitHead": "afa5608a20e9a45cabd526b5bbbf47c74d46cc87",
+  "gitHead": "9996ac2f514c7397205bd4e3126b2f2766820fd1",
   "dependencies": {
     "firebase": "^8.2.6"
   }
