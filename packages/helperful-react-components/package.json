@@ -55,5 +55,5 @@
     "cross-env": "^7.0.3"
   },
   "main": "dist/index.js",
-  "gitHead": "8d1a444aca9910939eed578fb5c293791b26b377"
+  "gitHead": "2dd404d9583178fd3e06e26ae8bb7c3a89239c9d"
 }
