@@ -10,6 +10,7 @@ module.exports = {
     },
     webpack: {
         configure: {
+            entry:path.resolve(process.env.entry),
             resolve: {
                 mainFields: [ 'main' ]
             },
@@ -19,7 +20,6 @@ module.exports = {
                     puppeteer: "require('puppeteer')",
                 },
                 function ( context, request ,callback) {
-                    console.log(request)
                     if (request.includes("__tests__/index")) {
                         const newPath = path.resolve(process.env.dir,request.replace("./__tests__/",""))
                         // Externalize to a commonjs module using the request path

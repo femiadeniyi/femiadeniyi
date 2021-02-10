@@ -16,10 +16,17 @@ function setPackageJson(){
         ...packageJson,
         main:"dist/index.js",
         private:false,
+        author:"femi adeniyi <dev@femiadeniyi.com>",
+        homepage:"https://github.com/femiadeniyi/femiadeniyi#readme",
+        repository: {
+            "type": "git",
+            "url": "git+https://github.com/femiadeniyi/femiadeniyi"
+        },
+        bugs: {
+            "url": "https://github.com/femiadeniyi/femiadeniyi/issues"
+        }
     }
-    if(packageJson.private || packageJson.main !== "dist/main.js"){
-        fs.writeJSON("package.json",{...packageJson, main:"dist/index.js"},{spaces:2})
-    }
+    fs.writeJSON("package.json",{...packageJson, main:"dist/index.js"},{spaces:2})
     console.log("set package.json")
     return packageJson
 }

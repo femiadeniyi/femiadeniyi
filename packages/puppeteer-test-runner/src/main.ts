@@ -2,8 +2,12 @@ import cp from "child_process"
 import electronPath from "electron"
 import * as yargs from "yargs";
 
-const {url,dir} = yargs.default(process.argv.slice(2))
+const {url,dir,entry} = yargs.default(process.argv.slice(2))
     .option('url', {
+        string: true,
+        demandOption: true
+    })
+    .option('entry', {
         string: true,
         demandOption: true
     })
@@ -45,7 +49,7 @@ export function main(){
     startProcess({
         command:npm,
         args:["start"],
-        env:{...process.env,dir}
+        env:{...process.env,dir,entry}
     })
 }
 

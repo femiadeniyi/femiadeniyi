@@ -25,7 +25,7 @@
   },
   "scripts": {
     "start:all": "concurrently \"npm start\" \"npm run start:electron\" ",
-    "start:electron": "cross-env TS_NODE_COMPILER_OPTIONS={\\\"module\\\":\\\"commonjs\\\"} ts-node src/main.ts --url http://localhost:3000 --dir C:\\Software\\femiadeniyi\\packages\\puppeteer-test-runner\\src\\__tests__",
+    "start:electron": "cross-env TS_NODE_COMPILER_OPTIONS={\\\"module\\\":\\\"commonjs\\\"} ts-node src/main.ts --url http://localhost:3000 --dir C:\\Software\\femiadeniyi\\packages\\puppeteer-test-runner\\src\\__tests__ --entry C:\\Software\\femiadeniyi\\packages\\puppeteer-test-runner\\src\\index.tsx",
     "start": "craco start",
     "build": "react-scripts build",
     "test": "react-scripts test",
