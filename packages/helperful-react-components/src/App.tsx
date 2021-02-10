@@ -3,7 +3,7 @@ import RouterComponent, {createRoutes} from "./components/RouterComponent";
 
 function App() {
 
-    const routes = createRoutes(["Business"])
+    const routes = createRoutes(["Business","music"])
     console.log(routes)
 
 
