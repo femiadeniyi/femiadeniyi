@@ -1,5 +1,5 @@
 {
-  "name": "testing-tools0-12334459",
+  "name": "intrium-testing-libs",
   "version": "0.2.7",
   "main": "dist/index.js",
   "dependencies": {
@@ -57,5 +57,5 @@
   "devDependencies": {
     "babel-plugin-istanbul": "^6.0.0"
   },
-  "gitHead": "2dd404d9583178fd3e06e26ae8bb7c3a89239c9d"
+  "gitHead": "ae03388c7832f0c6551439664e16402bd45b0640"
 }
