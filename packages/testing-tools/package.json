@@ -1,6 +1,6 @@
 {
   "name": "intrium-testing-libs",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "main": "dist/index.js",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
