@@ -1,6 +1,6 @@
 {
   "name": "testing-tools",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "main": "dist/index.js",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
