@@ -15,7 +15,7 @@ export interface BusinessHeaderProps {
 export function BusinessHeader({}:BusinessHeaderProps){
 
     return (
-        <Container fluid>
+        <>
             <Row className="justify-content-center position-relative">
                 <Row className="position-absolute" style={{width:"100%", height:"100%"}}>
                     <CircleComponent alignment="align-self-start" color="#f36aa9" />
@@ -91,7 +91,7 @@ export function BusinessHeader({}:BusinessHeaderProps){
                 </Col>
 
             </Row>
-        </Container>
+        </>
     )
 }
 

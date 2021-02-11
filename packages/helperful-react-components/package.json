@@ -2,6 +2,7 @@
   "name": "helpful-react-components",
   "version": "0.2.8",
   "dependencies": {
+    "@emotion/react": "^11.1.5",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.6.3",
@@ -15,6 +16,7 @@
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.3",
     "react-dom": "^17.0.1",
+    "react-icons": "^4.2.0",
     "react-placeholder": "^4.1.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.2",
@@ -24,6 +26,7 @@
   },
   "scripts": {
     "sonar": "sonar-scanner",
+    "start:craco": "craco start",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -50,12 +53,15 @@
     ]
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.12.13",
+    "@emotion/babel-plugin": "^11.2.0",
     "@storybook/addon-actions": "^6.1.17",
     "@storybook/addon-essentials": "^6.1.17",
     "@storybook/addon-links": "^6.1.17",
     "@storybook/node-logger": "^6.1.17",
     "@storybook/preset-create-react-app": "^3.1.5",
     "@storybook/react": "^6.1.17",
+    "craco": "0.0.3",
     "cross-env": "^7.0.3"
   },
   "author": "femi adeniyi <dev@femiadeniyi.com>",
