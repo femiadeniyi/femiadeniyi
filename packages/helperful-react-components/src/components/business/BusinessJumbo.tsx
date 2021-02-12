@@ -1,4 +1,4 @@
-import React, {FC, PropsWithChildren, useEffect} from "react"
+import React, {Component, FC, PropsWithChildren, useEffect} from "react"
 import {Button, Card, Col, Container, Jumbotron, Row, Image} from "react-bootstrap";
 import {useSpring,useSprings,animated} from "react-spring";
 import ReactPlaceholder from 'react-placeholder';
@@ -13,9 +13,12 @@ export interface BusinessJumboProps {
     bg?:string
     justifyContainer?:"center"|"start"|"end"
     justifyContent?:boolean
-    padding?: {top:string,bottom:string}
-    title?:string
+    padding?: {top?:string,bottom?:string}
+    title?:FC
     description?:string
+    footer?:string
+    subContainer?:FC,
+    className?:string
 }
 
 export function BusinessJumbo(props:PropsWithChildren<BusinessJumboProps>) {
@@ -27,9 +30,10 @@ export function BusinessJumbo(props:PropsWithChildren<BusinessJumboProps>) {
         justifyContent=false,
         padding,
         description,
+        footer,
+        subContainer,
+        className,
     } = props
-
-    console.log(padding,"paddo")
 
     const classes = {
         container:classnames({
@@ -52,34 +56,41 @@ export function BusinessJumbo(props:PropsWithChildren<BusinessJumboProps>) {
     }
     return (
         <Row
-            className={`${classes.container} mt-4`}
+            className={`${classes.container} ${className || ""}`}
             style={{
                 background:bg || "initial"
             }}
         >
+            {subContainer && (
+                subContainer({})
+            )}
             <Col className={classes.content.col} css={styles.col}>
-                <Row>
-                    <Col>
-                        <div className="d-inline-block">
-                            <h1 className="font-weight-bold mb-3" style={{fontSize:"2.5rem"}}>{title}</h1>
-                        </div>
-                    </Col>
-                </Row>
+                {title && (
+                    <Row>
+                        <Col>
+                            <div className="d-inline-block">
+                                {title({})}
+                            </div>
+                        </Col>
+                    </Row>
+                )}
                 <Row>
                     <Col>
                         <p className="m-0">{description}</p>
                     </Col>
                 </Row>
                 {children && (
-                    <Row className="justify-content-center">
+                    <>
                         {children}
+                    </>
+                )}
+                {footer && (
+                    <Row className={`${classes.content.row} pt-3`}>
+                        <Col>
+                            <Button className="font-weight-bold p-0" variant="link" as="a">{footer}</Button>
+                        </Col>
                     </Row>
                 )}
-                <Row className={`${classes.content.row} pt-3`}>
-                    <Col>
-                        <Button className="font-weight-bold p-0" variant="link" as="a">Find out more</Button>
-                    </Col>
-                </Row>
             </Col>
         </Row>
     )

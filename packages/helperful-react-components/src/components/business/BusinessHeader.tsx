@@ -1,6 +1,7 @@
 import React, {useEffect} from "react"
 import {Button, Card, Col, Container, Jumbotron, Row} from "react-bootstrap";
 import {useSpring,useSprings,animated} from "react-spring";
+import BusinessCard from "./BusinessCard";
 
 export interface BusinessHeaderProps {
     /**
@@ -25,8 +26,9 @@ export function BusinessHeader({}:BusinessHeaderProps){
                 </Row>
                 <Col md="auto">
                     <Jumbotron className="text-center" style={{margin:"120px 0",background:"transparent"}}>
-                        <h1 className="m-3" style={{fontSize:"6.5rem",fontWeight:900}}>Hello, world!</h1>
+                        <h1 className="m-3" style={{fontSize:"6.5rem",fontWeight:900}}>Femi Adeniyi</h1>
                         <p  style={{fontSize:"1.1rem", width:"60%", margin:"0 auto"}}>
+                            Open source, enterprise-grade web application
                             This is a simple hero unit, a simple jumbotron-style component for calling
                             extra attention to featured content or information.
                         </p>
@@ -36,60 +38,50 @@ export function BusinessHeader({}:BusinessHeaderProps){
                     </Jumbotron>
                 </Col>
             </Row>
-            <Row className="justify-content-center">
-                <Col lg={9}>
+            <Row className="justify-content-center" css={{paddingBottom:"6rem"}}>
+                <BusinessCard>
                     <Row>
-                        <Card>
-                            <Card.Body>
-                                <Row>
-                                    <Col lg={4} className="p-0">
-                                        <Card border="light" as="a" style={{color:"initial"}}>
-                                            <Card.Body>
-                                                <Card.Title>Card Title</Card.Title>
-                                                <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
-                                                <Card.Text>
-                                                    Some quick example text to build on the card title and make up the bulk of
-                                                    the card's content.
-                                                </Card.Text>
+                        <Col lg={4} className="p-0">
+                            <Card border="light" as="a" style={{color:"initial"}}>
+                                <Card.Body>
+                                    <Card.Title>Card Title</Card.Title>
+                                    <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
+                                    <Card.Text>
+                                        Some quick example text to build on the card title and make up the bulk of
+                                        the card's content.
+                                    </Card.Text>
 
-                                            </Card.Body>
-                                        </Card>
-                                    </Col>
-                                    <Col lg={4} className="p-0">
-                                        <Card border="light" as="a" style={{color:"initial"}}>
-                                            <Card.Body>
-                                                <Card.Title>Card Title</Card.Title>
-                                                <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
-                                                <Card.Text>
-                                                    Some quick example text to build on the card title and make up the bulk of
-                                                    the card's content.
-                                                </Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </Col>
+                        <Col lg={4} className="p-0">
+                            <Card border="light" as="a" style={{color:"initial"}}>
+                                <Card.Body>
+                                    <Card.Title>Card Title</Card.Title>
+                                    <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
+                                    <Card.Text>
+                                        Some quick example text to build on the card title and make up the bulk of
+                                        the card's content.
+                                    </Card.Text>
 
-                                            </Card.Body>
-                                        </Card>
-                                    </Col>
-                                    <Col lg={4} className="p-0">
-                                        <Card border="light" as="a" style={{color:"initial"}}>
-                                            <Card.Body>
-                                                <Card.Title>Card Title</Card.Title>
-                                                <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
-                                                <Card.Text>
-                                                    Some quick example text to build on the card title and make up the bulk of
-                                                    the card's content.
-                                                </Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </Col>
+                        <Col lg={4} className="p-0">
+                            <Card border="light" as="a" style={{color:"initial"}}>
+                                <Card.Body>
+                                    <Card.Title>Card Title</Card.Title>
+                                    <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
+                                    <Card.Text>
+                                        Some quick example text to build on the card title and make up the bulk of
+                                        the card's content.
+                                    </Card.Text>
 
-                                            </Card.Body>
-                                        </Card>
-                                    </Col>
-                                </Row>
-
-
-                            </Card.Body>
-                        </Card>
-
+                                </Card.Body>
+                            </Card>
+                        </Col>
                     </Row>
-                </Col>
-
+                </BusinessCard>
             </Row>
         </>
     )
@@ -122,19 +114,31 @@ function randomFrom(min:number, max:number){
 interface CircleComponentProps {
     alignment:"align-self-start"|"align-self-center"|"align-self-end"
     color:string
+    from?:any
+    to?:any
+    duration?:number
 }
-function CircleComponent({alignment,color}:CircleComponentProps) {
+export function CircleComponent(props:CircleComponentProps) {
+    const {
+        alignment,
+        color,
+        from,
+        duration,
+        to
+    } = props
+
     const s = useSpring({
-        from: {
+        from:from ||  {
             height:200,
             width:200,
             borderRadius:30,
             background:color
         },
-        to: {
+        to: to || {
             borderRadius:40
         },
         loop:{ reverse: true },
+        ...(duration && {config:{duration}})
     })
 
     return (

@@ -3,7 +3,7 @@ Hello there 👋
 Thanks for coming to my profile. Here is a few things to know me better:
 
 # Femi Adeniyi
-Open source web applications to copy, modify and make your own. The main purpose is to build web applications (mobile/desktop native) with the latest tools and give away for free.
+Open source web applications to copy, modify and make your own.
 
 - Open Source technologies - Free to use, modify and commercialise without attribution.
 - All platforms - Applications can be compiled for Browser, Mobile and Desktop

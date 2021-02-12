@@ -1,4 +1,4 @@
-import React, {useEffect} from "react"
+import React, {Component, FC, useEffect} from "react"
 import {Button, Card, Col, Container, Jumbotron, Row} from "react-bootstrap";
 import {useSpring,useSprings,animated} from "react-spring";
 import BusinessJumbo from "./BusinessJumbo";
@@ -15,9 +15,10 @@ export interface BusinessContentProps {
     description?:string
     padding?:{top?:string,bottom?:string}
     icon?:() => JSX.Element
-    subTitle?:string
+    subTitle?:FC
     testament?:string
     author?:string
+    background?:string
 }
 
 /**
@@ -32,13 +33,15 @@ export function BusinessContent(props:BusinessContentProps){
         testament,
         description,
         author,
-        inverse
+        inverse,
+        background
     } = props
 
     const styles = {
         container: css({
             ...(padding?.top && {paddingTop:padding.top}),
-            ...(padding?.bottom && {paddingBottom:padding.bottom})
+            ...(padding?.bottom && {paddingBottom:padding.bottom}),
+            ...(background && {background})
         })
     }
 
@@ -91,7 +94,7 @@ export function BusinessContent(props:BusinessContentProps){
         </Col>
     )
     return (
-        <Row className="justify-content-center position-relative" css={styles.container}>
+        <Row className={`justify-content-center position-relative`} css={styles.container}>
             {inverse ? (
                 <>
                     <MediaColumn />
