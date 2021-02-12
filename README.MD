@@ -2,6 +2,16 @@ Hello there 👋
 
 Thanks for coming to my profile. Here is a few things to know me better:
 
+# Femi Adeniyi
+Open source web applications to copy, modify and make your own. The main purpose is to build web applications (mobile/desktop native) with the latest tools and give away for free.
+
+- Open Source technologies - Free to use, modify and commercialise without attribution.
+- All platforms - Applications can be compiled for Browser, Mobile and Desktop
+- Powered by Google Cloud - Peace of mind with managed infrastructure
+- 5 Templates - Business, Music, Trading, Ecommerce and Desktop. Customise to your needs
+- High Quality Codebase - Clean code with good docs and no vulnerabilities - Verified by SonarCloud
+- Unopinionated - Easy to understand vanilla style programming with minimal use of libraries.
+
 ## Preferred Tech Stack
 
 | Stack Type | Elements |
@@ -12,7 +22,7 @@ Thanks for coming to my profile. Here is a few things to know me better:
 | API |  ![Stripe](https://img.shields.io/badge/-Stripe-008CDD?style=flat-square&logo=stripe&logoColor=white)
 | DevOps |  ![Terraform](https://img.shields.io/badge/-Terraform-623CE4?style=flat-square&logo=terraform&logoColor=white)  ![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=docker&logoColor=white) ![Docker](https://img.shields.io/badge/-SonarCloud-F3702A?style=flat-square&logo=sonarcloud&logoColor=white) |
 | Backend |  ![Golang](https://img.shields.io/badge/-Golang-00ADD8?style=flat-square&logo=go&logoColor=white)  ![Node.js](https://img.shields.io/badge/-Node.js-339933?style=flat-square&logo=node.js&logoColor=white)  ![Rust](https://img.shields.io/badge/-Rust-000?style=flat-square&logo=rust&logoColor=white)  |
-| Frontend |  ![React](https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=react&logoColor=white) |
+| Frontend |  ![React](https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=react&logoColor=white) ![Bootstrap](https://img.shields.io/badge/-Bootstrap-7952B3?style=flat-square&logo=bootstrap&logoColor=white) |
 
 
 ## Resume
@@ -32,7 +42,7 @@ Thanks for coming to my profile. Here is a few things to know me better:
 
 
 
-### Available for hire
+## Available for hire
 | Rate | Features/Stories |
 | --- | ------------ | 
 | £5,000 | 1 | 3 | 2020/2021 |

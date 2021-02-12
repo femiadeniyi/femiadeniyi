@@ -58,7 +58,7 @@ export function Business() {
                 inverse
                 author="Devops Engineer"
                 title="Open Source"
-                subTitle="No ads, no fees"
+                subTitle="Say no to Credit Card"
                 icon={() => <AiFillGoogleCircle />}
                 padding={{top:"6rem",bottom:"6rem"}}
                 testament="I never have to worry about anything anymore. Everything just works all the time."
@@ -67,7 +67,7 @@ export function Business() {
             <BusinessContent
                 author="Devops Engineer"
                 title="All Platforms"
-                subTitle="No ads, no fees"
+                subTitle="Mobile, Desktop and Web"
                 icon={() => <AiFillGoogleCircle />}
                 padding={{top:"6rem",bottom:"6rem"}}
                 testament="I never have to worry about anything anymore. Everything just works all the time."
