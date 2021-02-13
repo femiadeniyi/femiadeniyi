@@ -2,6 +2,7 @@ import React, {Component, FC, useEffect} from "react"
 import {Button, Card, Col, Container, Jumbotron, Row} from "react-bootstrap";
 import {useSpring,useSprings,animated} from "react-spring";
 import BusinessJumbo from "./BusinessJumbo";
+
 import ReactPlaceholder from "react-placeholder";
 import {css} from "@emotion/react";
 

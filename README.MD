@@ -5,10 +5,10 @@ Thanks for coming to my profile. Here is a few things to know me better:
 # Femi Adeniyi
 Open source web applications to copy, modify and make your own.
 
-- Open Source technologies - Free to use, modify and commercialise without attribution.
-- All platforms - Applications can be compiled for Browser, Mobile and Desktop
-- Powered by Google Cloud - Peace of mind with managed infrastructure
-- 5 Templates - Business, Music, Trading, Ecommerce and Desktop. Customise to your needs
+- Open Source - Free to use, modify and commercialise.
+- All platforms - Browser, Mobile and Desktop
+- Powered by Google Cloud - Peace of mind, managed infrastructure
+- 5 Templates - Business, Music, Trading, Ecommerce, Desktop.
 - High Quality Codebase - Clean code with good docs and no vulnerabilities - Verified by SonarCloud
 - Unopinionated - Easy to understand vanilla style programming with minimal use of libraries.
 
@@ -21,9 +21,8 @@ Open source web applications to copy, modify and make your own.
 | Cloud |  ![Google Cloud](https://img.shields.io/badge/-Google%20Cloud-blue?style=flat-square&logo=google-cloud&logoColor=white)  ![Firebase](https://img.shields.io/badge/-Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black) |
 | API |  ![Stripe](https://img.shields.io/badge/-Stripe-008CDD?style=flat-square&logo=stripe&logoColor=white)
 | DevOps |  ![Terraform](https://img.shields.io/badge/-Terraform-623CE4?style=flat-square&logo=terraform&logoColor=white)  ![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=docker&logoColor=white) ![Docker](https://img.shields.io/badge/-SonarCloud-F3702A?style=flat-square&logo=sonarcloud&logoColor=white) |
-| Backend |  ![Golang](https://img.shields.io/badge/-Golang-00ADD8?style=flat-square&logo=go&logoColor=white)  ![Node.js](https://img.shields.io/badge/-Node.js-339933?style=flat-square&logo=node.js&logoColor=white)  ![Rust](https://img.shields.io/badge/-Rust-000?style=flat-square&logo=rust&logoColor=white)  |
-| Frontend |  ![React](https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=react&logoColor=white) ![Bootstrap](https://img.shields.io/badge/-Bootstrap-7952B3?style=flat-square&logo=bootstrap&logoColor=white) |
-
+| Backend |  ![Golang](https://img.shields.io/badge/-Golang-00ADD8?style=flat-square&logo=go&logoColor=white)  ![Node.js](https://img.shields.io/badge/-Node.js-339933?style=flat-square&logo=node.js&logoColor=white)  ![Rust](https://img.shields.io/badge/-Rust-000?style=flat-square&logo=rust&logoColor=white) ![Next.js](https://img.shields.io/badge/-Next.js-000?style=flat-square&logo=next.js&logoColor=white) |
+| Frontend |  ![React](https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=react&logoColor=white) ![Bootstrap](https://img.shields.io/badge/-Bootstrap-7952B3?style=flat-square&logo=bootstrap&logoColor=white) ![Gatsby](https://img.shields.io/badge/-Gatsby-663399?style=flat-square&logo=gatsby&logoColor=white) |
 
 ## Resume
 

@@ -4,7 +4,7 @@ import {useSpring,useSprings,animated} from "react-spring";
 import ReactPlaceholder from 'react-placeholder';
 import "react-placeholder/lib/reactPlaceholder.css";
 
-export interface BusinessHeaderProps {
+export interface BusinessTestamentProps {
     /**
      * Is this the principal call to action on the page?
      */

@@ -1,20 +1,16 @@
 {
-  "exclude": [
-    "./public",
-    "**/craco.config.js",
-    "./dist",
-    "**/*.test.tsx",
-    "**/*.test.ts"
-  ],
   "compilerOptions": {
-    "target": "es5",
+    "types": [
+      "@emotion/core"
+    ],
+    "target": "esnext",
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
     ],
     "allowJs": true,
-    "outDir": "./dist",
+    "outDir": "./dist/esm",
     "declaration": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -26,10 +22,9 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "react-jsx",
-    "noEmit": true
+    "jsx": "react-jsx"
   },
   "include": [
-    "src"
+    "src/index.tsx",
   ]
 }

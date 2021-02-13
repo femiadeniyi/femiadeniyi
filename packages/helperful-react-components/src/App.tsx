@@ -1,9 +1,10 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import "bootstrap/dist/css/bootstrap.min.css"
 import RouterComponent, {createRoutes} from "./components/RouterComponent";
 
-function App() {
-
-    const routes = createRoutes(["Business","music"])
+export function App() {
+    const routes = createRoutes(["Business", "music"])
     console.log(routes)
 
 
@@ -11,10 +12,14 @@ function App() {
         <RouterComponent
             routes={routes}
             importFn={(file) => import(`./pages/${file}`)}
-            logo={{type:"image",value:"Helpful Components"}}
+            logo={{type: "image", value: "Helpful Components"}}
         />
     )
-
 }
 
-export default App;
+ReactDOM.render(
+    <React.StrictMode>
+        <App/>
+    </React.StrictMode>,
+    document.getElementById('root')
+)
