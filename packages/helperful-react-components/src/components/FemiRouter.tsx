@@ -44,7 +44,7 @@ interface MainRouterProps {
     logo: MainRouterLogoProps
     routerType?: "browser" | "memory"
 }
-export function RouterComponent({routes,importFn,logo,routerType}:MainRouterProps){
+export function FemiRouter({routes,importFn,logo,routerType}:MainRouterProps){
     let Router:React.ElementType = routerType === "browser" ? BrowserRouter : MemoryRouter
     return (
         <Router>
@@ -93,4 +93,4 @@ export function RouterComponent({routes,importFn,logo,routerType}:MainRouterProp
     )
 }
 
-export default RouterComponent
+export default FemiRouter

@@ -9,9 +9,11 @@ module.exports = {
     ],
     presets: [
         "@babel/preset-typescript",
-        ["@babel/preset-env", {
-            "modules": "cjs"
-        }],
+        [
+            "@babel/preset-env", process.env.BABEL_CJS && {
+                "modules": "cjs"
+            }
+        ],
         [
             "@babel/preset-react",
             { "runtime": "automatic", "importSource": "@emotion/react" }

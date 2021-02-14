@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import "bootstrap/dist/css/bootstrap.min.css"
-import RouterComponent, {createRoutes} from "./components/RouterComponent";
+import FemiRouter, {createRoutes} from "./components/RouterComponent";
 
 export function App() {
     const routes = createRoutes(["Business", "music"])
@@ -9,7 +9,7 @@ export function App() {
 
 
     return (
-        <RouterComponent
+        <FemiRouter
             routes={routes}
             importFn={(file) => import(`./pages/${file}`)}
             logo={{type: "image", value: "Helpful Components"}}
