@@ -36,27 +36,44 @@ export function BusinessSite() {
         ],
         moreInfo: [
             {
-                name:"Resume",
+                name:"ecommerce"
             },
             {
-                name:"Pricing"
+                name:"business"
+            },
+            {
+                name:"trading"
+            },
+            {
+                name:"desktop"
+            },
+            {
+                name:"music"
+            },
+            {
+                name:"pricing"
             }
         ],
-        programmingLanguages: [
+        resources: [
             {
-                name:"rust"
+                name:"documentation"
             },
             {
-                name:"typescript"
+                name:"what is powered by google?"
             },
             {
-                name:"node.js"
+                name:"me vs alternatives"
             },
             {
-                name:"golang"
+                name:"migrate"
+            },
+        ],
+        aboutMe: [
+            {
+                name:"resume"
             },
             {
-                name:"reactjs"
+                name:"contact"
             }
         ]
     }
@@ -120,7 +137,7 @@ export function BusinessSite() {
                 padding={{top: "6rem"}}
             />
             <BusinessContent
-                author="Software Engineer"
+                author="Devops Engineer"
                 title="Google Grade Security"
                 subTitle={() => <Header1 title={"Powered by Google"}/>}
                 icon={() => <AiFillGoogleCircle/>}
@@ -151,7 +168,7 @@ export function BusinessSite() {
                 )}
             />
             <BusinessContent
-                author="Web Designer"
+                author="Web Developer"
                 title="All Platforms"
                 subTitle={() => <Header1 title={"Mobile, Desktop and Web"}/>}
                 icon={() => <GiPlatform/>}
@@ -332,11 +349,11 @@ export function BusinessSite() {
                     <Col md={3}>
                         <BusinessTile
                             className={"text-left"}
-                            title={() => <h4 className="font-weight-bold mb-3">Extreme hard worker</h4>}
+                            title={() => <h4 className="font-weight-bold mb-3">Up to date</h4>}
                             description={() => (
                                 <Row>
                                     <Col>
-                                        <p className="m-0">Coding till 5 in the morning is normal. When you work with me expect satisfaction. I rely on Google to make this possible.</p>
+                                        <p className="m-0">Not only in using the latest technologies but also in modern management processes so you can understand the current and future state of your product at every step.</p>
                                     </Col>
                                 </Row>
                             )}
@@ -346,11 +363,11 @@ export function BusinessSite() {
                     <Col md={3}>
                         <BusinessTile
                             className={"text-left"}
-                            title={() => <h4 className="font-weight-bold mb-3">Speed is a priority</h4>}
+                            title={() => <h4 className="font-weight-bold mb-3">Committed</h4>}
                             description={() => (
                                 <Row>
                                     <Col>
-                                        <p className="m-0">When it comes to technology, I make speed a priority. Working on DRY principles allows me to achieve this.</p>
+                                        <p className="m-0">I'm 100% committed to delivering high quality software which is why I'm strictly bound by Google infrastructure to ensure nothing less is achieved and is consistent. </p>
                                     </Col>
                                 </Row>
                             )}
@@ -360,11 +377,11 @@ export function BusinessSite() {
                     <Col md={3}>
                         <BusinessTile
                             className={"text-left"}
-                            title={() => <h4 className="font-weight-bolder mb-3">Ambitious</h4>}
+                            title={() => <h4 className="font-weight-bolder mb-3">Transparency</h4>}
                             description={() => (
                                 <Row>
                                     <Col>
-                                        <p className="m-0">My no.1 goal is to create products that help others create their own products easily and freely.</p>
+                                        <p className="m-0">I believe in working in a complete transparent environment which why I'm strong user of open source tools and publicising processes for better working relationships.</p>
                                     </Col>
                                 </Row>
                             )}
@@ -379,7 +396,7 @@ export function BusinessSite() {
                         <Col md={3}>
                             <Row>
                                 <Col>
-                                    <h6 className={"mb-3"}>More Information</h6>
+                                    <h6 className={"mb-3"}>Solutions</h6>
                                 </Col>
                             </Row>
                             <Row>
@@ -393,12 +410,12 @@ export function BusinessSite() {
                         <Col md={3}>
                             <Row>
                                 <Col>
-                                    <h6 className={"mb-3"}>Tools</h6>
-                                    {menus.programmingLanguages.map(f => (
+                                    <h6 className={"mb-3"}>About</h6>
+                                    {menus.aboutMe.map(f => (
                                         <div><Button css={{fontSize:12}} className={"text-white p-0"} variant="link" as={"a"}>{f.name}</Button></div>
                                     ))}
-                                    <h6 className={"mb-3 mt-2"}>Docs</h6>
-                                    {menus.docs.map(f => (
+                                    <h6 className={"mb-3 mt-3"}>Resources</h6>
+                                    {menus.resources.map(f => (
                                         <div><Button css={{fontSize:12}} className={"text-white p-0"} variant="link" as={"a"}>{f.name}</Button></div>
                                     ))}
                                 </Col>

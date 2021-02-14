@@ -2,7 +2,7 @@ import React, {Component, FC, useEffect} from "react"
 import {Button, Card, Col, Container, Jumbotron, Row} from "react-bootstrap";
 import {useSpring,useSprings,animated} from "react-spring";
 import BusinessJumbo from "./BusinessJumbo";
-
+import logo from "./fa.logo.png"
 import ReactPlaceholder from "react-placeholder";
 import {css} from "@emotion/react";
 
@@ -74,7 +74,9 @@ export function BusinessContent(props:BusinessContentProps){
                                 </p>
                                 <footer className="blockquote-footer" css={{"&:before":{content:`""`}}}>
                                     <div className="d-inline-block align-middle">
-                                        <ReactPlaceholder ready={false} type="media" rows={0}>{}</ReactPlaceholder>
+                                        <ReactPlaceholder ready={true} type="media" rows={0}>{}
+                                            <img src={logo} width={100} height={32} />
+                                        </ReactPlaceholder>
                                     </div>
                                     <div className="d-inline-block">
                                         <strong className="text-dark" style={{fontSize:13}}>| {author}</strong>
