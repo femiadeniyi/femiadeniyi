@@ -35,7 +35,7 @@ export function BusinessCard(props:PropsWithChildren<BusinessCardProps>){
         <Col lg={containerSpan}>
             <Row>
                 <Col>
-                    <Card as="a">
+                    <Card>
                         <Card.Body css={styles.cardBody}>
                             {children}
                         </Card.Body>

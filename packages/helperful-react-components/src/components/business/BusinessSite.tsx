@@ -5,9 +5,10 @@ import {Button, Card, Col, Container, Form, Row} from "react-bootstrap";
 import ReactPlaceholder from "react-placeholder";
 import React from "react";
 import BusinessContent from "./BusinessContent";
-import {AiFillGoogleCircle} from 'react-icons/ai';
-import {GiStrongMan} from "react-icons/gi"
+import {AiFillGoogleCircle,AiFillGithub} from 'react-icons/ai';
+import {GiStrongMan, GiPlatform, GiPadlock} from "react-icons/gi"
 import {BiSad} from "react-icons/bi"
+import {BsBuilding} from "react-icons/bs"
 import {BsArrowRight} from "react-icons/bs"
 import BusinessCard from "./BusinessCard";
 import BusinessTile from "./BusinessTile";
@@ -68,14 +69,20 @@ export function BusinessSite() {
         <Container fluid>
             <BusinessHeader/>
             <BusinessJumbo
-                title={() => <Header1 title={"Welcome to this"}/>}
-                description={"Hello"}
+                title={() => <Header1 title={"Technology used by millions"}/>}
+                description={() => (
+                    <Row className="justify-content-center">
+                        <Col md={6}>
+                            <p className="m-0">Own your product and the code. By using open source technologies we're able to take technical transparency to a better place leading to consistent quality.</p>
+                        </Col>
+                    </Row>
+                )}
                 padding={{top: "6rem", bottom: "6rem"}}
                 bg="rgb(245, 247, 250)"
                 justifyContent
                 footer="Find out more"
             >
-                <Row className="justify-content-center">
+                <Row className="justify-content-center mt-5">
                     <Col md={2}>
                         <ReactPlaceholder type='media' ready={false} rows={4}>
 
@@ -99,40 +106,64 @@ export function BusinessSite() {
                 </Row>
             </BusinessJumbo>
             <BusinessJumbo
-                title={() => <Header1 title={"Welcome to this"}/>}
+                title={() => <Header1 title={"Explore. Find. Own."}/>}
                 justifyContainer="center"
                 justifyContent
-                description="123 and go"
+                description={() => (
+                    <Row>
+                        <Col>
+                            <p className="m-0">Explore our apps and choose one that suits your case. Deploy and continuously build your product based on our stack.</p>
+                        </Col>
+                    </Row>
+                )}
                 footer="Find out more"
                 padding={{top: "6rem"}}
             />
             <BusinessContent
-                author="Devops Engineer"
+                author="Software Engineer"
                 title="Google Grade Security"
                 subTitle={() => <Header1 title={"Powered by Google"}/>}
                 icon={() => <AiFillGoogleCircle/>}
                 padding={{top: "6rem"}}
-                testament="I never have to worry about anything anymore. Everything just works all the time."
-                description="Never worry about where to deploy, setting up pipelines or anything. Leverage the years of experience behind Google to make sure your app gets the best."
+                testament="As long as I follow Google standards, I have technical confidence in what I build 100% of the time."
+                description={() => (
+                    <Row>
+                        <Col>
+                            <p className="m-0">Peace of mind - Our stack is based on Google and we closely follow their guidelines to ensure we deliver Google quality applications with ease and efficiency.</p>
+                        </Col>
+                    </Row>
+                )}
             />
             <BusinessContent
                 inverse
-                author="Devops Engineer"
+                author="Software Engineer"
                 title="Open Source"
-                subTitle={() => <Header1 title={"Say no to Credit Card"}/>}
-                icon={() => <AiFillGoogleCircle/>}
+                subTitle={() => <Header1 title={"It's Free"}/>}
+                icon={() => <AiFillGithub/>}
                 padding={{top: "6rem"}}
-                testament="I never have to worry about anything anymore. Everything just works all the time."
-                description="Never worry about managing servers, security or anything. Leverage the years of experience behind Google to make sure your app is always on, working, secure and for free."
+                testament="Whenever I have a technical problem, I just google it and I find the answer. This how I became a developer."
+                description={() => (
+                    <Row>
+                        <Col>
+                            <p className="m-0">Our tools are open source which actually helps us deliver better software since we adhere to common practices and standards used by millions of other developers.</p>
+                        </Col>
+                    </Row>
+                )}
             />
             <BusinessContent
-                author="Devops Engineer"
+                author="Web Designer"
                 title="All Platforms"
                 subTitle={() => <Header1 title={"Mobile, Desktop and Web"}/>}
-                icon={() => <AiFillGoogleCircle/>}
+                icon={() => <GiPlatform/>}
                 padding={{top: "6rem", bottom: "6rem"}}
-                testament="I never have to worry about anything anymore. Everything just works all the time."
-                description="Never worry about managing servers, security or anything. Leverage the years of experience behind Google to make sure your app is always on, working, secure and for free."
+                testament="Back in the day, you coded the same site twice for mobile and web. Now we code once and it works everywhere."
+                description={() => (
+                    <Row>
+                        <Col>
+                            <p className="m-0">Our tools allow us to build once for all platforms and enjoy a native experience. This comes for free with all of our templates.</p>
+                        </Col>
+                    </Row>
+                )}
             />
             <BusinessJumbo
                 title={() => <Header1 title={"What started all this"}/>}
@@ -200,22 +231,33 @@ export function BusinessSite() {
             </BusinessJumbo>
             <BusinessContent
                 background={"rgb(245, 247, 250)"}
-                author="Devops Engineer"
+                author="QA"
                 title="High Quality Codebase"
                 subTitle={() => <h1 className="font-weight-bold mb-3" style={{fontSize: "2.5rem"}}>Verified by
                     SonarCloud</h1>}
                 icon={() => <AiFillGoogleCircle/>}
                 padding={{top: "6rem", bottom: "6rem"}}
-                testament="I never have to worry about anything anymore. Everything just works all the time."
-                description="Never worry about managing servers, security or anything. Leverage the years of experience behind Google to make sure your app is always on, working, secure and for free."
+                testament="Sometimes I'm not 100% confident in my code even when I'm sure it's ok. Now it's a fact!"
+                description={() => (
+                    <Row>
+                        <Col>
+                            <p className="m-0">We are serious about quality and transparency and our code is statically analysed to ensure we deliver software free of bugs and security issues. This is made publicly available.</p>
+                        </Col>
+                    </Row>
+                )}
             />
             <Row css={{paddingTop:120,paddingBottom:120}}>
                 <Col md={{span: 3, offset: 2}}>
                     <BusinessJumbo
-                        title={() => <h1 className="font-weight-bold mb-3" style={{fontSize: "2.5rem"}}>Build anything
-                            you want</h1>}
+                        title={() => <h1 className="font-weight-bold mb-3" style={{fontSize: "2.5rem"}}>You can build anything</h1>}
                         justifyContainer="center"
-                        description="Full stack web applications ready to be customised to your needs. Use one of our templates to get started."
+                        description={() => (
+                            <Row>
+                                <Col>
+                                    <p className="m-0">You're ready to fly but worried if you need technical know-how; not need. Find out how you can gain maximum reward with minimal effort.</p>
+                                </Col>
+                            </Row>
+                        )}
                         footer="Find out more"
                     />
                 </Col>
@@ -223,21 +265,31 @@ export function BusinessSite() {
                     <Row>
                         <Col md={4}>
                             <BusinessTile
-                                icon={() => <AiFillGoogleCircle className="mb-4"/>}
-                                subTitle={() => <h6 className="font-weight-bold mb-3">Guided by industry best
-                                    practices</h6>}
-                                description={"We closely follow the patterns advised by Google to ensure high quality, secure and modern applications."}
+                                icon={() => <BsBuilding className="mb-4"/>}
+                                subTitle={() => <h6 className="font-weight-bold mb-3">Follow industry practices, expect industry results</h6>}
+                                description={() => (
+                                    <Row>
+                                        <Col>
+                                            <p className="m-0">Learn more about how our way of working aligns with industry practices so you can expect the right results.</p>
+                                        </Col>
+                                    </Row>
+                                )}
                                 footer={() => <Button className="font-weight-bold p-0" variant="link" as="a">Find out
                                     more</Button>}
                             />
                         </Col>
                         <Col md={4}>
                             <BusinessTile
-                                icon={() => <AiFillGoogleCircle className="mb-4"/>}
-                                subTitle={() => <h6 className="font-weight-bold mb-3">All solutions baked into 1</h6>}
-                                description={"From taking payments online, scaling based on traffic to SEO and analytics. We have every web app needs covered."}
-                                footer={() => <Button className="font-weight-bold p-0" variant="link" as="a">Find out
-                                    more</Button>}
+                                icon={() => <GiPadlock className="mb-4"/>}
+                                subTitle={() => <h6 className="font-weight-bold mb-3">Enterprise Solutions</h6>}
+                                description={() => (
+                                    <Row>
+                                        <Col>
+                                            <p className="m-0">From facilitating transactions between buyers and sellers to scaling loads based on traffic. See how we're bringing enterprise solutions to everyday web apps.</p>
+                                        </Col>
+                                    </Row>
+                                )}
+                                footer={() => <Button className="font-weight-bold p-0" variant="link" as="a">Find out more</Button>}
                             />
                         </Col>
                     </Row>
@@ -281,7 +333,13 @@ export function BusinessSite() {
                         <BusinessTile
                             className={"text-left"}
                             title={() => <h4 className="font-weight-bold mb-3">Extreme hard worker</h4>}
-                            description={"Coding till 5 in the morning is normal. When you work with me expect satisfaction. I rely on Google to make this possible."}
+                            description={() => (
+                                <Row>
+                                    <Col>
+                                        <p className="m-0">Coding till 5 in the morning is normal. When you work with me expect satisfaction. I rely on Google to make this possible.</p>
+                                    </Col>
+                                </Row>
+                            )}
                             footer={() => <BsArrowRight />}
                         />
                     </Col>
@@ -289,7 +347,13 @@ export function BusinessSite() {
                         <BusinessTile
                             className={"text-left"}
                             title={() => <h4 className="font-weight-bold mb-3">Speed is a priority</h4>}
-                            description={"When it comes to technology, I make speed a priority. Working on DRY principles allows me to achieve this."}
+                            description={() => (
+                                <Row>
+                                    <Col>
+                                        <p className="m-0">When it comes to technology, I make speed a priority. Working on DRY principles allows me to achieve this.</p>
+                                    </Col>
+                                </Row>
+                            )}
                             footer={() => <BsArrowRight />}
                         />
                     </Col>
@@ -297,7 +361,13 @@ export function BusinessSite() {
                         <BusinessTile
                             className={"text-left"}
                             title={() => <h4 className="font-weight-bolder mb-3">Ambitious</h4>}
-                            description={"My no.1 goal is to create products that help others create their own products easily and freely."}
+                            description={() => (
+                                <Row>
+                                    <Col>
+                                        <p className="m-0">My no.1 goal is to create products that help others create their own products easily and freely.</p>
+                                    </Col>
+                                </Row>
+                            )}
                             footer={() => <BsArrowRight />}
                         />
                     </Col>

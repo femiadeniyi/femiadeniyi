@@ -15,7 +15,7 @@ export interface BusinessJumboProps {
     justifyContent?:boolean
     padding?: {top?:string,bottom?:string}
     title?:FC
-    description?:string
+    description?:FC
     footer?:string
     subContainer?:FC,
     className?:string
@@ -74,11 +74,9 @@ export function BusinessJumbo(props:PropsWithChildren<BusinessJumboProps>) {
                         </Col>
                     </Row>
                 )}
-                <Row>
-                    <Col>
-                        <p className="m-0">{description}</p>
-                    </Col>
-                </Row>
+                {description && (
+                    description({})
+                )}
                 {children && (
                     <>
                         {children}

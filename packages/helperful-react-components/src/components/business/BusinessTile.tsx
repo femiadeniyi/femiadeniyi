@@ -12,7 +12,7 @@ export interface BusinessTileProps {
      */
     inverse?:boolean
     title?:FC
-    description?:string
+    description?:FC
     padding?:{top?:string,bottom?:string}
     icon?:() => JSX.Element
     subTitle?:FC

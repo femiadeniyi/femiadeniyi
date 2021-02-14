@@ -15,6 +15,16 @@ export interface BusinessHeaderProps {
  */
 export function BusinessHeader({}:BusinessHeaderProps){
 
+    const CardItem = ({title,subTitle,description}:{title:string,subTitle:string,description:string}) => (
+        <Button className={"text-left"} as={"a"} variant={"link"} css={{color:"initial"}}>
+            <Card.Title className={"text-muted"}>{title}</Card.Title>
+            <h3 className="mb-2">{subTitle}</h3>
+            <Card.Text>
+                {description}
+            </Card.Text>
+        </Button>
+    )
+
     return (
         <>
             <Row className="justify-content-center position-relative">
@@ -28,12 +38,10 @@ export function BusinessHeader({}:BusinessHeaderProps){
                     <Jumbotron className="text-center" style={{margin:"120px 0",background:"transparent"}}>
                         <h1 className="m-3" style={{fontSize:"6.5rem",fontWeight:900}}>Femi Adeniyi</h1>
                         <p  style={{fontSize:"1.1rem", width:"60%", margin:"0 auto"}}>
-                            Open source, enterprise-grade web application
-                            This is a simple hero unit, a simple jumbotron-style component for calling
-                            extra attention to featured content or information.
+                            Enterprise-grade web application services 100% powered by Google.
                         </p>
                         <p className="mt-3">
-                            <Button style={{fontWeight:600}} variant="primary">Learn more</Button>
+                            <Button style={{fontWeight:600}} variant="primary">Get started</Button>
                         </p>
                     </Jumbotron>
                 </Col>
@@ -41,44 +49,16 @@ export function BusinessHeader({}:BusinessHeaderProps){
             <Row className="justify-content-center" css={{paddingBottom:"6rem"}}>
                 <BusinessCard>
                     <Row>
-                        <Col lg={4} className="p-0">
-                            <Card border="light" as="a" style={{color:"initial"}}>
-                                <Card.Body>
-                                    <Card.Title>Card Title</Card.Title>
-                                    <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
-                                    <Card.Text>
-                                        Some quick example text to build on the card title and make up the bulk of
-                                        the card's content.
-                                    </Card.Text>
-
-                                </Card.Body>
-                            </Card>
+                        <Col lg={4}>
+                        <CardItem title={"Products"} subTitle={"Take Payment"} description={"Facilitate taking payment in your app today thanks to Stripe - create online stores and marketplaces."} />
                         </Col>
                         <Col lg={4} className="p-0">
-                            <Card border="light" as="a" style={{color:"initial"}}>
-                                <Card.Body>
-                                    <Card.Title>Card Title</Card.Title>
-                                    <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
-                                    <Card.Text>
-                                        Some quick example text to build on the card title and make up the bulk of
-                                        the card's content.
-                                    </Card.Text>
+                            <CardItem title={"Products"} subTitle={"Pay only for what you need"} description={"No need to hire a teams anymore. Use our free powerful templates and upgrade if necessary."} />
 
-                                </Card.Body>
-                            </Card>
                         </Col>
                         <Col lg={4} className="p-0">
-                            <Card border="light" as="a" style={{color:"initial"}}>
-                                <Card.Body>
-                                    <Card.Title>Card Title</Card.Title>
-                                    <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
-                                    <Card.Text>
-                                        Some quick example text to build on the card title and make up the bulk of
-                                        the card's content.
-                                    </Card.Text>
+                            <CardItem title={"Products"} subTitle={"Enterprise Grade"} description={"Technology that powers Google - reliable, secure and up to date with modern standards."} />
 
-                                </Card.Body>
-                            </Card>
                         </Col>
                     </Row>
                 </BusinessCard>

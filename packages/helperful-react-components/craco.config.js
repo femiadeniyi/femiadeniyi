@@ -17,6 +17,20 @@ module.exports = {
             },
         }
     }),
+    webpack: {
+        configure: {
+            ...(test ? {
+                entry:"./src/websites/index.tsx",
+                target:"electron-renderer",
+                externals: {
+                    puppeteer: "require('puppeteer')",
+                    jsdom: "require('jsdom')",
+                },
+            }: {
+                entry:"./src/App.tsx",
+            })
+        },
+    },
     babel: {
         presets:[
             [

@@ -13,7 +13,7 @@ export interface BusinessContentProps {
      */
     inverse?:boolean
     title?:string
-    description?:string
+    description?:FC
     padding?:{top?:string,bottom?:string}
     icon?:() => JSX.Element
     subTitle?:FC
