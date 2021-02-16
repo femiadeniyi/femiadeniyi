@@ -4,4 +4,4 @@ require("ts-node").register({
     }
 });
 
-module.exports = require("./craco.config.ts").default
+module.exports = require("./babel.config.ts").default

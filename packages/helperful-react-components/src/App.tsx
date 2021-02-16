@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import "bootstrap/dist/css/bootstrap.min.css"
-import FemiRouter, {createRoutes} from "./components/RouterComponent";
+import {FemiRouter,createRoutes} from "./index";
 
 export function App() {
     const routes = createRoutes(["Business", "music"])

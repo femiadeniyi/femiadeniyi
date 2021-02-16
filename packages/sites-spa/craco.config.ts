@@ -1,9 +1,16 @@
+console.log(33)
 
 export default {
     reactScriptsVersion: "react-scripts" /* (default value) */,
     webpack: {
-        configure: {
-            entry: `./src/${process.env.REACT_APP_SITE}/App.tsx`,
+        configure: (webpackConfig:any) => {
+            console.log(9000)
+            const scopePluginIndex = webpackConfig.resolve.plugins.findIndex(
+                ({ constructor }:any) => constructor && constructor.name === 'ModuleScopePlugin'
+            );
+            webpackConfig.resolve.plugins.splice(scopePluginIndex, 1);
+            console.log(webpackConfig)
+            return webpackConfig;
         },
     },
     babel: {

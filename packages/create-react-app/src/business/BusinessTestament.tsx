@@ -46,3 +46,4 @@ export function BusinessTestament() {
         </Container>
     )
 }
+export default BusinessTestament

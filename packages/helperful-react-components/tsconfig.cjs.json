@@ -3,6 +3,11 @@
     "types": [
       "@emotion/core"
     ],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "emitDeclarationOnly": true,
     "outDir": "./dist/cjs",
     "declaration": true,

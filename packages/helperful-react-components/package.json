@@ -39,10 +39,10 @@
     "web-vitals": "^1.1.0"
   },
   "scripts": {
-    "babel:cjs": "cross-env BABEL_CJS=true babel src --extensions .ts,.tsx -d dist/cjs --copy-files",
-    "babel:esm": "babel src --extensions .ts,.tsx -d dist/esm --copy-files",
-    "tsc:cjs":"tsc --project tsconfig.cjs.json",
-    "tsc:esm":"tsc --project tsconfig.esm.json",
+    "babel:cjs": "cross-env BABEL_CJS=true babel src --extensions .ts,.tsx -d dist/cjs --copy-files --no-copy-ignored",
+    "babel:esm": "babel src --extensions .ts,.tsx -d dist/esm --copy-files --no-copy-ignored",
+    "tsc:cjs": "tsc --project tsconfig.cjs.json",
+    "tsc:esm": "tsc --project tsconfig.esm.json",
     "dist": "concurrently \"npm run babel:cjs\" \"npm run babel:esm\" && concurrently \"npm run tsc:cjs\" \"npm run tsc:esm\"",
     "sonar": "sonar-scanner",
     "start": "craco start",

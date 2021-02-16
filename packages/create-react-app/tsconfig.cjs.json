@@ -1,21 +1,18 @@
 {
-  "exclude": [
-    "**/craco.config.js",
-    "./dist",
-    "**/*.test.tsx",
-    "**/*.test.ts"
-  ],
   "compilerOptions": {
+    "jsxImportSource": "@emotion/react",
     "target": "es5",
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
     ],
+    "downlevelIteration": true,
+    "emitDeclarationOnly": true,
     "allowJs": true,
-    "outDir": "./dist",
-    "declaration": true,
+    "outDir": "./dist/cjs",
     "skipLibCheck": true,
+    "declaration": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
@@ -26,5 +23,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "react-jsx"
-  }
+  },
+  "include": [
+    "src/global.d.ts",
+    "src/business",
+    "src/firebase"
+  ]
 }
