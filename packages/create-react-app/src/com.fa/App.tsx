@@ -7,15 +7,21 @@ import logo from "../business/fa.logo.png";
 import {BiSad} from "react-icons/bi";
 import {GiPadlock, GiStrongMan} from "react-icons/gi";
 import {animated, useSpring} from "react-spring";
-import BusinessJumbo from "../business/BusinessJumbo";
-import BusinessTile from "../business/BusinessTile";
 import {BsArrowRight, BsBuilding} from "react-icons/bs";
+import {Helmet} from "react-helmet"
+import {Link} from "react-router-dom"
+
 
 export default () => {
 
 
     return (
         <Container fluid>
+
+            {/*TODO SEO*/}
+            <Helmet>
+                <title>Femi Adeniyi | Web Application Services</title>
+            </Helmet>
 
             {/* TODO HEADER */}
             <Row className="justify-content-center position-relative">
@@ -528,48 +534,52 @@ export default () => {
                         </Col>
                     </Row>
                     <Row className="justify-content-center" css={{marginTop:64}}>
-                        <Col md={3}>
-                            <BusinessTile
-                                className={"text-left"}
-                                title={() => <h4 className="font-weight-bold mb-3">Up to date</h4>}
-                                description={() => (
+                        {
+                            [
+                                {
+                                    title:"Up to date",
+                                    description:"Not only in using the latest technologies but also in modern management processes so you can understand the current and future state of your product at every step.",
+                                    icon:BsArrowRight
+                                },
+                                {
+                                    title:"Committed",
+                                    description:"I'm 100% committed to delivering high quality software which is why I'm strictly bound by Google infrastructure to ensure nothing less is achieved and is consistent.",
+                                    icon:BsArrowRight
+                                },
+                                {
+                                    title:"Transparency",
+                                    description:"I believe in working in a complete transparent environment which why I'm strong user of open source tools and publicising processes for better working relationships.",
+                                    icon:BsArrowRight
+                                },
+                            ].map(f => (
+                                <Col md={3}>
                                     <Row>
                                         <Col>
-                                            <p className="m-0">Not only in using the latest technologies but also in modern management processes so you can understand the current and future state of your product at every step.</p>
+                                            <Button className={"text-left text-white p-0"} variant={"link"} as={Link} to={`/${f.title.toLowerCase()}`}>
+                                                <Row>
+                                                    <Col>
+                                                        <div className="d-inline-block">
+                                                            <h4 className="font-weight-bold mb-3">{f.title}</h4>
+                                                        </div>
+                                                    </Col>
+                                                </Row>
+                                                <Row>
+                                                    <Col>
+                                                        <p className="m-0">{f.description}</p>
+                                                    </Col>
+                                                </Row>
+                                            </Button>
+
                                         </Col>
                                     </Row>
-                                )}
-                                footer={() => <BsArrowRight />}
-                            />
-                        </Col>
-                        <Col md={3}>
-                            <BusinessTile
-                                className={"text-left"}
-                                title={() => <h4 className="font-weight-bold mb-3">Committed</h4>}
-                                description={() => (
-                                    <Row>
+                                    <Row className={`pt-3`}>
                                         <Col>
-                                            <p className="m-0">I'm 100% committed to delivering high quality software which is why I'm strictly bound by Google infrastructure to ensure nothing less is achieved and is consistent. </p>
+                                            <f.icon />
                                         </Col>
                                     </Row>
-                                )}
-                                footer={() => <BsArrowRight />}
-                            />
-                        </Col>
-                        <Col md={3}>
-                            <BusinessTile
-                                className={"text-left"}
-                                title={() => <h4 className="font-weight-bolder mb-3">Transparency</h4>}
-                                description={() => (
-                                    <Row>
-                                        <Col>
-                                            <p className="m-0">I believe in working in a complete transparent environment which why I'm strong user of open source tools and publicising processes for better working relationships.</p>
-                                        </Col>
-                                    </Row>
-                                )}
-                                footer={() => <BsArrowRight />}
-                            />
-                        </Col>
+                                </Col>
+                            ))
+                        }
                     </Row>
                 </Col>
             </Row>
