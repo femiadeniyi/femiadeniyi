@@ -5,7 +5,7 @@ import {FormControl} from "react-bootstrap";
 import {appContext} from "../App";
 
 
-function History(){
+function Account(){
 
     const context = useContext(appContext)
 
@@ -21,55 +21,36 @@ function History(){
 
     const {
         get,put,post,del
-    } = createCrud("timesheets",auth.currentUser?.email || "")
+    } = createCrud("account",auth.currentUser?.email || "")
 
 
     const cols = [
         {
-            Header: 'Timesheet',
+            Header: 'Account',
             columns: [
                 {
-                    Header:"Description",
-                    accessor:"description",
+                    Header:"First Name",
+                    accessor:"firstName",
                 },
                 {
-                    Header:"Hours",
-                    accessor:"hours",
+                    Header:"Last Name",
+                    accessor:"lastName",
                 },
-                {
-                    Header:"Rate",
-                    accessor:"rate",
-                },
-                {
-                    Header:"Date",
-                    accessor:"date",
-                }
             ],
         }
     ]
 
     const fields = createFields([
-        "description",
-        "hours",
-        "rate",
-        "__datetimedate",
+        "firstName",
+        "lastName",
     ],{allRequired:true})
 
     const formConfig = {
-        inputs:createFormInputs(fields).map(f => {
-            console.log(f.uid)
-            if(f.uid === "hours"){
-                return ({
-                    ...f,
-                    Comp:createComp((props) => (
-                        <FormControl {...props} type={"number"} />
-                    ))
-                })
-            } else return f
-        }),
+        inputs:createFormInputs(fields),
         handleSubmit:createHandleSubmit({
             async onCreate(data){
                 await post(data)
+                window.location.reload()
             },
             async onEdit(data){
                 await put(data.id, data)
@@ -91,4 +72,4 @@ function History(){
     )
 }
 
-export default History
+export default Account

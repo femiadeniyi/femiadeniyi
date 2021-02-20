@@ -58,7 +58,7 @@ export function FemiRouter({routes,importFn,logo,routerType}:MainRouterProps){
                                 const [authorised,setAuthorised] = useState(false)
 
                                 useEffect(() => {
-                                    auth?.().then(setAuthorised)
+                                    auth?.().then(setAuthorised).catch(console.error)
                                 },[])
 
 

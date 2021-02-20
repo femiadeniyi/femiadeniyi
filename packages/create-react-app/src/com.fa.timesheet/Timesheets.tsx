@@ -1,93 +1,119 @@
-import React, {FormEvent, useContext, useEffect, useState} from "react"
-import {Row, Container, Form, InputGroup, FormControl, Button, Spinner} from "react-bootstrap";
-import firebase from "firebase/app";
-
-import App from "./App";
+import React, {useContext, useEffect} from "react";
+import {FemiTable} from "../table/FemiTable";
+import {createComp, createFields, createFormInputs, createHandleSubmit, FemiForm} from "../forms/FemiForm";
+import {FormControl} from "react-bootstrap";
 import {appContext} from "../App";
 
 
-export default function Timesheets(){
+function App() {
 
     const context = useContext(appContext)
 
     const fbApp = context.find(f => f.name === "spring")
-    if(!fbApp) throw "unknown fbApp"
+    if (!fbApp) throw "unknown fbApp"
 
     const {
-        firestore:{
+        firestore: {
             createCrud
         },
-        auth,
-        authUi,
+        auth
     } = fbApp
 
-    const email  = auth.currentUser?.email
+    const email = auth.currentUser?.email
 
+    if (!email) throw "unknown users"
 
-    const [authorisation, setAuthorisation] = useState<"loading" | "authorised" | "not authorised">("loading")
+    const {
+        get, put, post, del
+    } = createCrud("timesheets", email)
 
-    useEffect(() => {
-        auth.onAuthStateChanged(function(user) {
-            if(user) {
-                if(user.email){
-                    createCrud("users","").post({
-                        id:user.email,
-                        displayName:user.displayName,
-                        email:user.email,
-                        uid:user.uid,
-                    })
-                }
-                setAuthorisation("authorised")
-            } else {
-                setAuthorisation("not authorised")
-            }
-        })
-    },[])
+    const getTimesheetApp = async () => {
+        const data = await get()
+        return data.filter(f => !f.submitted)
+    }
 
-    useEffect(() => {
-        if(authorisation === "not authorised"){
-            authUi.start("#login",{
-                callbacks: {
-                    signInSuccessWithAuthResult: function(authResult, redirectUrl) {
-                        console.log(333444)
-                        // User successfully signed in.
-                        // Return type determines whether we continue the redirect automatically
-                        // or whether we leave that to developer to handle.
-                        setAuthorisation("authorised")
-                        createCrud("users","").post({
-                            id:authResult.user.email,
-                            displayName:authResult.user.displayName,
-                            email:authResult.user.email,
-                            uid:authResult.user.uid,
-                        })
-                        return true
-                    },
-                    uiShown: function() {
-                        // The widget is rendered.
-                        // Hide the loader.
-                        // document.getElementById('loader').style.display = 'none';
-                        setAuthorisation("not authorised")
-                    }
+    const cols = [
+        {
+            Header: 'Timesheet',
+            columns: [
+                {
+                    Header: "Description",
+                    accessor: "description",
                 },
-                signInOptions:[firebase.auth.EmailAuthProvider.PROVIDER_ID,]
-            })
+                {
+                    Header: "Address",
+                    accessor: "address",
+                },
+                {
+                    Header: "Date Worked",
+                    accessor: "date",
+                },
+                {
+                    Header: "Hours",
+                    accessor: "hours",
+                },
+                {
+                    Header: "Rate/Flat Rate",
+                    accessor: "rate",
+                },
+            ],
         }
-    },[authorisation])
+    ]
+
+    const fields = createFields([
+        "address",
+        "description",
+        "hours",
+        "rate",
+        "__datetimedate",
+    ], {allRequired: true})
+
+    const formConfig = {
+        inputs: createFormInputs(fields).map(f => {
+            console.log(f.uid)
+            if (f.uid === "hours" || f.uid === "rate") {
+                return ({
+                    ...f,
+                    Comp: createComp((props) => (
+                        <FormControl {...props} type={"number"} step={.01}/>
+                    ))
+                })
+            } else return f
+        }),
+        handleSubmit: createHandleSubmit({
+            async onCreate(data) {
+                await post(data)
+            },
+            async onEdit(data) {
+                await put(data.id, data)
+            },
+        })
+    }
 
 
-    if (authorisation === "authorised") return <App />
-    else
-        return (
-            <Container>
-                <Row className="row align-items-center justify-content-center" style={{height:"100vh"}}>
-                    {authorisation === "loading" && (
-                        <Spinner animation="border" role="status">
-                            <span className="sr-only">Loading...</span>
-                        </Spinner>
-                    )}
-                    <div id="login"></div>
-                </Row>
-            </Container>
-        )
-
+    return (
+        <>
+            <div className="btn btn-primary" onClick={async () => {
+                const data = await get()
+                Promise.all(data.map(f => {
+                    return del(f.id)
+                })).then(() => window.location.reload())
+            }}>
+                Reset
+            </div>
+            <FemiTable
+                tableStyle={["responsive", "hover"]}
+                cols={cols}
+                get={getTimesheetApp}
+                put={put}
+                update={false}
+                post={post}
+                form={
+                    ({data, cleanup}) => <FemiForm data={data} cleanup={cleanup} {...formConfig} />
+                }
+            />
+        </>
+    )
 }
+
+export default App
