@@ -1,19 +1,35 @@
-import React, {useEffect} from "react";
+import React, {useContext, useEffect} from "react";
 import {FemiTable} from "../table/FemiTable";
 import {createComp, createFields, createFormInputs, createHandleSubmit, FemiForm} from "../forms/FemiForm";
 import {FormControl} from "react-bootstrap";
 import FemiSelect from "../forms/FemiSelect";
 import { startOfISOWeek, endOfISOWeek,format } from 'date-fns'
+import {appContext} from "../App";
 
 function RaiseInvoice(){
 
-    const email  =window.femiAuth.currentUser?.email
+    const context = useContext(appContext)
+
+    const fbApp = context.find(f => f.name === "spring")
+    if(!fbApp) throw "unknown fbApp"
+
+    const {
+        firestore:{
+            createCrud
+        },
+        functions,
+        auth,
+        authUi,
+    } = fbApp
+
+    const email  = auth.currentUser?.email
 
     if(!email) throw "unknown users"
 
+
     const {
         get:getTimesheets,
-    } = window.femiCreateCrud("timesheets",email)
+    } = createCrud("timesheets",email)
 
     async function getAvailableTimesheets(){
         const data = await getTimesheets()
@@ -33,7 +49,7 @@ function RaiseInvoice(){
 
     const {
         get,put,post,del
-    } = window.femiCreateCrud("invoices",email)
+    } = createCrud("invoices",email)
 
     const cols = [
         {
@@ -66,7 +82,7 @@ function RaiseInvoice(){
         }),
         handleSubmit:createHandleSubmit({
             async onCreate(data){
-                const getSupplier = window.femiFunction.httpsCallable("getSupplier")
+                const getSupplier = functions.httpsCallable("getSupplier")
                 const d = await getSupplier()
                 console.log(d,data)
             },

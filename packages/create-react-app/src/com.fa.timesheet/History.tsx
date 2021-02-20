@@ -1,18 +1,28 @@
-import React, {useEffect} from "react";
+import React, {useContext, useEffect} from "react";
 import {FemiTable} from "../table/FemiTable";
 import {createComp, createFields, createFormInputs, createHandleSubmit, FemiForm} from "../forms/FemiForm";
 import {FormControl} from "react-bootstrap";
+import {appContext} from "../App";
 
 
-function Timesheets(){
+function History(){
 
-    const email  =window.femiAuth.currentUser?.email
+    const context = useContext(appContext)
 
-    if(!email) throw "unknown users"
+    const fbApp = context.find(f => f.name === "spring")
+    if(!fbApp) throw "unknown fbApp"
+
+    const {
+        firestore:{
+            createCrud
+        },
+        auth
+    } = fbApp
 
     const {
         get,put,post,del
-    } = window.femiCreateCrud("timesheets",email)
+    } = createCrud("timesheets",auth.currentUser?.email || "")
+
 
     const cols = [
         {
@@ -73,8 +83,6 @@ function Timesheets(){
             tableStyle={["responsive","hover"]}
             cols={cols}
             get={get}
-            put={put}
-            update={false}
             post={post}
             form={
                 ({data,cleanup}) => <FemiForm data={data} cleanup={cleanup} {...formConfig} />
@@ -83,4 +91,4 @@ function Timesheets(){
     )
 }
 
-export default Timesheets
+export default History

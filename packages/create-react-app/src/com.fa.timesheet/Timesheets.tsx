@@ -1,17 +1,29 @@
-import React, {FormEvent, useEffect, useState} from "react"
+import React, {FormEvent, useContext, useEffect, useState} from "react"
 import {Row, Container, Form, InputGroup, FormControl, Button, Spinner} from "react-bootstrap";
 import firebase from "firebase/app";
-import "../firebase/firebase"
-import "firebaseui/dist/firebaseui.css"
-import Timesheets from "./Timesheets";
+
+import App from "./App";
+import {appContext} from "../App";
 
 
-const firestore = window.femiFirestore
-const auth = window.femiAuth
-const authUi = window.femiAuthUi
-const createCrud = window.femiCreateCrud
+export default function Timesheets(){
 
-export default function Login(){
+    const context = useContext(appContext)
+
+    const fbApp = context.find(f => f.name === "spring")
+    if(!fbApp) throw "unknown fbApp"
+
+    const {
+        firestore:{
+            createCrud
+        },
+        auth,
+        authUi,
+    } = fbApp
+
+    const email  = auth.currentUser?.email
+
+
     const [authorisation, setAuthorisation] = useState<"loading" | "authorised" | "not authorised">("loading")
 
     useEffect(() => {
@@ -63,7 +75,7 @@ export default function Login(){
     },[authorisation])
 
 
-    if (authorisation === "authorised") return <Timesheets />
+    if (authorisation === "authorised") return <App />
     else
         return (
             <Container>
