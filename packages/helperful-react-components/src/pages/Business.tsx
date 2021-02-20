@@ -1,1 +1,0 @@
-export {BusinessSite as default} from "../components/business"
