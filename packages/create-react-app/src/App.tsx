@@ -177,7 +177,8 @@ export function App() {
         <>
             {
                 createApp([
-                    "timesheets.femiadeniyi.com"
+                    "timesheets.femiadeniyi.com",
+                    "femiadeniyi.com"
                 ])
             }
         </>

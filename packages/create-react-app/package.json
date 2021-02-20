@@ -76,7 +76,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "serve": "serve build"
+    "serve": "serve build",
+    "deploy": "firebase deploy --only hosting"
   },
   "eslintConfig": {
     "extends": [
