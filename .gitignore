@@ -47,3 +47,5 @@ sonar-project.properties
 dist
 
 .cache
+
+packages/gatsby
