@@ -1,6 +1,6 @@
 {
   "name": "puppeteer-test-runner",
-  "version": "0.2.8",
+  "version": "0.3.0",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
