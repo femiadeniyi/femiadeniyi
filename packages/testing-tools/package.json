@@ -57,7 +57,7 @@
   "devDependencies": {
     "babel-plugin-istanbul": "^6.0.0"
   },
-  "gitHead": "ae03388c7832f0c6551439664e16402bd45b0640",
+  "gitHead": "0a3f9c7f8f0504f42d184e9eff632577333e8006",
   "private": false,
   "author": "femi adeniyi <dev@femiadeniyi.com>",
   "homepage": "https://github.com/femiadeniyi/femiadeniyi#readme",
