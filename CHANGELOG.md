@@ -1,7 +1,8 @@
-# Change Log
+# Changelog
 
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [0.3.1](https://github.com/webdevshop/webdevshop/compare/v0.3.0...v0.3.1) (2021-02-21)
 
 # [0.3.0](https://github.com/webdevshop/webdevshop/compare/v0.2.8...v0.3.0) (2021-02-21)
 

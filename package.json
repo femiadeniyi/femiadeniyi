@@ -1,5 +1,6 @@
 {
-  "name": "@webdevshop/webdevshop",
+  "name": "femiadeniyi",
+  "version": "0.3.1",
   "private": true,
   "scripts": {
     "packages:publish": "lerna publish --ignore-changes testing-tools cra-template-femi --conventional-commits",
@@ -7,7 +8,8 @@
     "packages:tsc": "lerna exec --ignore cra-template-femi -- tsc",
     "packages:publish-setup": "lerna exec -- npm publish --access public",
     "packages:clean": "lerna exec del-cli dist",
-    "prepublish": "concurrently \"terraform init && terraform apply -auto-approve\" \"npm run packages:scripts\" && npm run packages:tsc"
+    "prepublish": "concurrently \"terraform init && terraform apply -auto-approve\" \"npm run packages:scripts\" && npm run packages:tsc",
+    "release": "standard-version"
   },
   "repository": {
     "type": "git",
@@ -20,11 +22,13 @@
     "@types/fs-extra": "^9.0.6",
     "chrome-launcher": "^0.13.4",
     "commander": "^7.0.0",
+    "commitizen": "^4.2.3",
     "concurrently": "^5.3.0",
     "cross-env": "^7.0.3",
     "del-cli": "^3.0.1",
     "fs-extra": "^9.1.0",
     "nyc": "^15.1.0",
+    "standard-version": "^9.1.1",
     "yargs": "^16.2.0"
   }
 }
