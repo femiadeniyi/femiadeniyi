@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.3](https://github.com/webdevshop/webdevshop/compare/v0.3.2...v0.3.3) (2021-02-21)
+
+
+### Features
+
+* **git:** release testing ([23c4d0e](https://github.com/webdevshop/webdevshop/commit/23c4d0e728607cb7b5a4d8939c98764e9b330f25))
+
 ### [0.3.2](https://github.com/webdevshop/webdevshop/compare/v0.3.1...v0.3.2) (2021-02-21)
 
 ### [0.3.1](https://github.com/webdevshop/webdevshop/compare/v0.3.0...v0.3.1) (2021-02-21)
