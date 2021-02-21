@@ -1,6 +1,6 @@
 {
   "name": "femiadeniyi",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "private": true,
   "scripts": {
     "packages:publish": "lerna publish --ignore-changes testing-tools cra-template-femi --conventional-commits",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/webdevshop/webdevshop.git"
+    "url": "https://github.com/femiadeniyi/femiadeniyi.git"
   },
   "devDependencies": {
     "lerna": "^3.22.1"
