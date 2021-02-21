@@ -14,17 +14,17 @@ function setPackageJson(){
     const packageJson = fs.readJSONSync("./package.json")
     const newPackageJson = {
         ...packageJson,
-        main:"dist/index.js",
-        private:false,
-        author:"femi adeniyi <dev@femiadeniyi.com>",
-        homepage:"https://github.com/femiadeniyi/femiadeniyi#readme",
-        repository: {
-            "type": "git",
-            "url": "git+https://github.com/femiadeniyi/femiadeniyi"
-        },
-        bugs: {
-            "url": "https://github.com/femiadeniyi/femiadeniyi/issues"
-        }
+        // main:"dist/index.js",
+        private:true,
+        // author:"femi adeniyi <dev@femiadeniyi.com>",
+        // homepage:"https://github.com/femiadeniyi/femiadeniyi#readme",
+        // repository: {
+        //     "type": "git",
+        //     "url": "git+https://github.com/femiadeniyi/femiadeniyi"
+        // },
+        // bugs: {
+        //     "url": "https://github.com/femiadeniyi/femiadeniyi/issues"
+        // }
     }
     fs.writeJSON("package.json",{...newPackageJson, main:"dist/index.js"},{spaces:2})
     console.log("set package.json")
