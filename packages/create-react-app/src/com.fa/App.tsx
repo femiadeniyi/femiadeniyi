@@ -440,7 +440,7 @@ export default () => {
                             </Row>
                             <Row className={`justify-content-center pt-3`}>
                                 <Col>
-                                    <Button className="font-weight-bold p-0" variant="link" as="a">Find out more</Button>
+                                    <Link to={"/buildAnything"} className={"font-weight-bold p-0"}>Find out more</Link>
                                 </Col>
                             </Row>
                         </Col>

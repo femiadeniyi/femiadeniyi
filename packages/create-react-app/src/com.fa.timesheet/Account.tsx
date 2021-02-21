@@ -2,7 +2,7 @@ import React, {useContext, useEffect} from "react";
 import {FemiTable} from "../table/FemiTable";
 import {createComp, createFields, createFormInputs, createHandleSubmit, FemiForm} from "../forms/FemiForm";
 import {FormControl} from "react-bootstrap";
-import {appContext} from "../App";
+import appContext from "../appContext";
 
 
 function Account(){

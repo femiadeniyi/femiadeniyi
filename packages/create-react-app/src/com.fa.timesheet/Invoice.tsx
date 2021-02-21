@@ -4,7 +4,7 @@ import {createComp, createFields, createFormInputs, createHandleSubmit, FemiForm
 import {FormControl} from "react-bootstrap";
 import FemiSelect from "../forms/FemiSelect";
 import { startOfISOWeek, endOfISOWeek,format } from 'date-fns'
-import {appContext} from "../App";
+import appContext from "../appContext";
 import ReactDOMServer from "react-dom/server"
 
 interface InvoiceDataTimesheet {

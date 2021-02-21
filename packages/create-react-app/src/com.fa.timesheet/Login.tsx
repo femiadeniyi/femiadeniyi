@@ -2,7 +2,7 @@ import React, {FormEvent, useContext, useEffect, useState} from "react"
 import {Row, Container, Form, InputGroup, FormControl, Button, Spinner} from "react-bootstrap";
 import firebase from "firebase/app";
 
-import {appContext} from "../App";
+import appContext from "../appContext";
 
 
 export default function Login(){
