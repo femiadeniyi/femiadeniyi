@@ -1,6 +1,6 @@
 Hello there 👋
 
-Thanks for coming to my profile. Here is a few things to know me better:
+Thanks for coming to my profile.  Here is a few things to know me better:
 
 # Femi Adeniyi
 Open source web applications to copy, modify and make your own.
