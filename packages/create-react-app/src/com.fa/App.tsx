@@ -10,10 +10,34 @@ import {animated, useSpring} from "react-spring";
 import {BsArrowRight, BsBuilding} from "react-icons/bs";
 import {Helmet} from "react-helmet"
 import {Link} from "react-router-dom"
+import ReactDomServer from "react-dom/server"
 
 
 export default () => {
 
+    console.log(ReactDomServer.renderToString(
+        <Card bg="light" border="light" className="mt-4">
+            <Card.Body css={{padding: ".75rem"}}>
+                <blockquote className="blockquote mb-0">
+                    <p style={{lineHeight: "20px"}}>
+                        <em style={{fontSize: "1rem"}} className="mb-0 testament">testament</em>
+                    </p>
+                    <footer className="blockquote-footer"
+                            css={{"&:before": {content: `""`}}}>
+                        <div className="d-inline-block align-middle">
+                            <ReactPlaceholder ready={true} type="media" rows={0}>{}
+                                <img src={logo} width={100} height={32}/>
+                            </ReactPlaceholder>
+                        </div>
+                        <div className="d-inline-block">
+                            <strong className="text-dark author"
+                                    style={{fontSize: 13}}>| author</strong>
+                        </div>
+                    </footer>
+                </blockquote>
+            </Card.Body>
+        </Card>
+    ),"heyy")
 
     return (
         <Container fluid>
@@ -24,15 +48,15 @@ export default () => {
             </Helmet>
 
             {/* TODO HEADER */}
-            <Row className="justify-content-center position-relative">
-                <Row className="position-absolute" style={{width: "100%", height: "100%"}}>
+            <div className="row justify-content-center position-relative">
+                <div className="row position-absolute" style={{width: "100%", height: "100%"}}>
                     <CircleComponent alignment="align-self-start" color="#f36aa9"/>
                     <CircleComponent alignment="align-self-end" color="#7de2d1"/>
                     <CircleComponent alignment="align-self-start" color="#f36aa9"/>
                     <CircleComponent alignment="align-self-end" color="#e6ebf2"/>
-                </Row>
-                <Col md="auto">
-                    <Jumbotron className="text-center" style={{margin: "120px 0", background: "transparent"}}>
+                </div>
+                <div className={"col"}>
+                    <div className=" jumbotron text-center" style={{margin: "120px 0", background: "transparent"}}>
                         <h1 className="m-3" style={{fontSize: "6.5rem", fontWeight: 900}}>Femi Adeniyi</h1>
                         <p style={{fontSize: "1.1rem", width: "60%", margin: "0 auto"}}>
                             Enterprise-grade web application services 100% powered by Google.
@@ -40,18 +64,18 @@ export default () => {
                         <p className="mt-3">
                             <Button style={{fontWeight: 600}} variant="primary">Get started</Button>
                         </p>
-                    </Jumbotron>
-                </Col>
-            </Row>
+                    </div>
+                </div>
+            </div>
 
             {/* TODO CARD-HEADER */}
-            <Row className="justify-content-center" css={{paddingBottom: "6rem"}}>
-                <Col lg={9}>
-                    <Row>
-                        <Col>
-                            <Card>
-                                <Card.Body>
-                                    <Row>
+            <div className="row justify-content-center" style={{paddingBottom: "6rem"}}>
+                <div className="col-lg-9">
+                    <div className="row">
+                        <div className="col">
+                            <div className="card">
+                                <div className="card-body">
+                                    <div className="row">
                                         {
                                             [
                                                 {
@@ -70,28 +94,27 @@ export default () => {
                                                     description: "Technology that powers Google - reliable, secure and up to date with modern standards.",
                                                 },
                                             ].map(({title, subTitle, description}, index) => (
-                                                <Col key={`${title}-${index}`} lg={4}>
-                                                    <Button className={"text-left"} as={"a"} variant={"link"}
-                                                            css={{color: "initial"}}>
-                                                        <Card.Title className={"text-muted"}>{title}</Card.Title>
+                                                <div className="col-lg-4">
+                                                    <a className="btn btn-link text-left" style={{color:"initial"}}>
+                                                        <div className="card-title text-muted">{title}</div>
                                                         <h3 className="mb-2">{subTitle}</h3>
-                                                        <Card.Text>
+                                                        <div className="card-text">
                                                             {description}
-                                                        </Card.Text>
-                                                    </Button>
-                                                </Col>
+                                                        </div>
+                                                    </a>
+                                                </div>
                                             ))
                                         }
-                                    </Row>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                    </Row>
-                </Col>
-            </Row>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             {/* TODO HERO-1 */}
-            <Row css={{background: "rgb(245, 247, 250)"}}>
+            <Row style={{background: "rgb(245, 247, 250)"}}>
                 <Col className={"text-center"} css={{paddingTop: "6rem", paddingBottom: "6rem"}}>
                     <Row>
                         <Col>
