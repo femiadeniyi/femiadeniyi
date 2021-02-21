@@ -9,7 +9,7 @@
     "packages:publish-setup": "lerna exec -- npm publish --access public",
     "packages:clean": "lerna exec del-cli dist",
     "prepublish": "concurrently \"terraform init && terraform apply -auto-approve\" \"npm run packages:scripts\" && npm run packages:tsc",
-    "release": "standard-version"
+    "release": "standard-version --dry-run"
   },
   "repository": {
     "type": "git",
