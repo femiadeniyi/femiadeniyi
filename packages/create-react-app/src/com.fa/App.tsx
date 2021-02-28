@@ -16,27 +16,81 @@ import ReactDomServer from "react-dom/server"
 export default () => {
 
     console.log(ReactDomServer.renderToString(
-        <Card bg="light" border="light" className="mt-4">
-            <Card.Body css={{padding: ".75rem"}}>
-                <blockquote className="blockquote mb-0">
-                    <p style={{lineHeight: "20px"}}>
-                        <em style={{fontSize: "1rem"}} className="mb-0 testament">testament</em>
-                    </p>
-                    <footer className="blockquote-footer"
-                            css={{"&:before": {content: `""`}}}>
-                        <div className="d-inline-block align-middle">
-                            <ReactPlaceholder ready={true} type="media" rows={0}>{}
-                                <img src={logo} width={100} height={32}/>
-                            </ReactPlaceholder>
-                        </div>
+        <Row className={"justify-content-center"} css={{background: "rgb(245, 247, 250)"}}>
+            <Col className={"text-center"} css={{paddingTop: "6rem"}}>
+                <Row>
+                    <Col>
                         <div className="d-inline-block">
-                            <strong className="text-dark author"
-                                    style={{fontSize: 13}}>| author</strong>
+                            <h1 className="font-weight-bold mb-3" style={{fontSize: "2.5rem"}}>What started all
+                                this</h1>
                         </div>
-                    </footer>
-                </blockquote>
-            </Card.Body>
-        </Card>
+                    </Col>
+                </Row>
+                <Row className="justify-content-center">
+                    <Col lg={5}>
+                        <Row>
+                            <Col>
+                                <Card>
+                                    <Card.Body className={"p-5"}>
+                                        <Row css={{textAlign: "left", color: "initial"}}>
+                                            <Col lg={5}>
+                                                <Row>
+                                                    <Col lg={2}>
+                                                        <BiSad css={{fontSize: 32}}/>
+                                                    </Col>
+                                                    <Col>
+                                                        <div className="d-inline-block align-middle">
+                                                            <h4 className="font-weight-bold">Tired</h4>
+                                                        </div>
+                                                    </Col>
+                                                </Row>
+                                                <Row>
+                                                    <Col lg={{offset: 2}}>
+                                                        <p>
+                                                            Tired of integrating different technologies to achieve
+                                                            the same result.
+                                                        </p>
+                                                    </Col>
+                                                </Row>
+                                            </Col>
+                                            <Col lg={2} className="p-0">
+                                                <h3 className="text-center">+</h3>
+                                            </Col>
+                                            <Col md={5}>
+                                                <Row>
+                                                    <Col lg={2}>
+                                                        <GiStrongMan css={{fontSize: 32}}/>
+                                                    </Col>
+                                                    <Col>
+                                                        <div className="d-inline-block align-middle">
+                                                            <h4 className="font-weight-bold">DRY</h4>
+                                                        </div>
+                                                    </Col>
+                                                </Row>
+                                                <Row>
+                                                    <Col lg={{offset: 2}}>
+                                                        <p>
+                                                            Don't solve already solved problems. Reuse solutions,
+                                                            build faster. (Don't
+                                                            repeat yourself)
+                                                        </p>
+                                                    </Col>
+                                                </Row>
+                                            </Col>
+                                        </Row>
+                                        <Row>
+                                            <Col>
+                                                <span className="font-weight-bold p-0">Find out more</span>
+                                            </Col>
+                                        </Row>
+                                    </Card.Body>
+                                </Card>
+                            </Col>
+                        </Row>
+                    </Col>
+                </Row>
+            </Col>
+        </Row>
     ),"heyy")
 
     return (
