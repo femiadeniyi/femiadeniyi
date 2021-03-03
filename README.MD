@@ -4,7 +4,6 @@ Thanks for coming to my profile.  Here is a few things to know me better:
 
 # Femi Adeniyi : I build apps
 
-![ddd](https://github.com/femiadeniyi/femiadeniyi/blob/master/final_edit_FemiTechnology_HD_V4.1.mp4?raw=true)
 
 ## Preferred Tech Stack
 
