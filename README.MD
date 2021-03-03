@@ -2,7 +2,7 @@ Hello there 👋
 
 Thanks for coming to my profile.  Here is a few things to know me better:
 
-# Femi Adeniyi
+# Femi Adeniyi : I build apps
 Open source web applications to copy, modify and make your own.
 
 - Open Source - Free to use, modify and commercialise.
