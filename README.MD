@@ -4,6 +4,7 @@ Thanks for coming to my profile.  Here is a few things to know me better:
 
 # Femi Adeniyi : I build apps
 
+![let femi build it](https://github.com/femiadeniyi/femiadeniyi/blob/master/let-femi-build-it.PNG?raw=true)
 
 ## Preferred Tech Stack
 
@@ -21,7 +22,7 @@ Thanks for coming to my profile.  Here is a few things to know me better:
 
 | Company | Role | Location | Time |
 | --- | ------------ | ----------- | ---------- |
-| [Femi Apps](http://github.com/femiadeniyi) | CEO | Remote, World 🌎 | 2021 |
+| [Femi Apps](https://femiapps.com) | CEO | Remote, World 🌎 | 2021 |
 | [![Linkedin: Nearshore Agile](https://img.shields.io/badge/-Nearshore%20Agile-white?style=flat-square&logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADo0lEQVRYw62XXWgUVxTHfzO7ZqbmY2PYgiVKiC9uzJZKraXry1VWAravhborBU1Y2tJiq4GWiotSKpSSB0FrDQHf0oZioYRAU1qUCxGqD32Q0hZMAlp9SbdpoGRds%207cPsy47ufsnTQHLsvce87%2F%2FOfcc3bOMQggQgiAXcBbwGtAAfgGuALcl1IGgQPACOB4G3DBc7ypRiXvkchKKVc2lIAQoh04BZwE7Bbq%2FwAfA1eklMX%2FRUAIEQJeB84DW4O8FfA77jXNSSlVIAJeuF8EJrzfxoaGgVK%202A7wPfAucLdZfpg1zqPAV8AtP%20cAIyMjWJblp2Li5ssfwGdCiGd8CQghdgO%2FASkg1CrGuwYGOHvmLKZptlK1gY%20AX4QQdVdpes6fA64Bz7ZCq5TEvgTDw8O66jHgmhCiKpFNIYQBXAa26CKFQk8DlE6n2fvSXl3TAeDD2ggMAod0ESzL4mAy%20RTANDmdPU1nZ6cuxHtCiHLymLjlsknXOpVKEY1Gq%2FYikQgnT5zQhYgCOyoJvKpr2dvbSzqdbni2%2F8AB4vG4DowBbK8ksFnHKhQKkc1maWtra4xqGIyOjupUBUC4koCWpFMpYrGYr05%2Ffz%20JREIXUp%2FA8%2FE4R48d0wLMZDK6UdAj0NPTw6fnzlWVnp%2F09fUR27lzYwjYts3Y2BiRSEQb0DAM0keOaOuH%2FYDeP36cjo4OlpaWqs7y%20TwrKyt1%205VRsG2bQqGwfgLhcJi79%205x%2F8GDurPN7e0sLC6ysLjYFHhoaIjp6en1E7Btm0wmo333tTJ%20eVxLLww8bHSQz%20eZmJggmUzS3d1d%2FvY7pRIKcBwHlMLx9pVSOI6DUopcLsfVb6%2F6%20S1VEpgF3qnTKJWYmppiZmaGw28cboChGj4Vi0UmJycplUo0EQX8%20eTBBMaBx820V1dXmbsxR6HwsGYVqtYjb%2F0wO%20vnHGAZKCdPGLgN%2FEiTL6JSivn5eYrFIvHBQd%2F7%2FPnmTf7K5WghX%20K284DXEwohtgG%2FAk0L3rIsurq6fJGXl5dbvf0d4AUpZTnvyk2pEOJl3HzQbkwCygIgpJRVdV3%20J5RS3sLtWL7D7Wg3StZwB5rdtc6rIlARCQN4BbctH2wJ31wUcB14G7jTrC33G0zCwJvA57hdTBBZwC3tnwIPJg2IdAGfeIBtLdT%2FBc4AX0gp13SYBhlOdwCXgIPUzw2PgEncjvfvIFOyFoEKIgawB%2FgAd%20pZA74GLgLz6xnP%2FwP%20yykoEEWIqAAAAABJRU5ErkJggg%3D%3D%0A&logoColor=white&link=https://www.linkedin.com/in/nearshore-agile)](https://www.nearshoreagile.co.uk/)| Technical Consultant | Lisbon, Portugal ![](https://flagcdn.com/16x12/pt.png)  | 2020/2021 |
 | [Cognizant](https://cognizant.com) / [Boots](https://boots.jobs) | Senior Developer | Nottingham, England ![](https://flagcdn.com/16x12/gb-eng.png)  | 2019/2020 |
 | [Peg B](https://pegb.tech) | Senior Developer | Dubai, UAE ![](https://flagcdn.com/16x12/ae.png)  | 2019 |
