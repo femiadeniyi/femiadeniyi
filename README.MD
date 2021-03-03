@@ -3,14 +3,8 @@ Hello there 👋
 Thanks for coming to my profile.  Here is a few things to know me better:
 
 # Femi Adeniyi : I build apps
-Open source web applications to copy, modify and make your own.
 
-- Open Source - Free to use, modify and commercialise.
-- All platforms - Browser, Mobile and Desktop
-- Powered by Google Cloud - Peace of mind, managed infrastructure
-- 5 Templates - Business, Music, Trading, Ecommerce, Desktop.
-- High Quality Codebase - Clean code with good docs and no vulnerabilities - Verified by SonarCloud
-- Unopinionated - Easy to understand vanilla style programming with minimal use of libraries.
+![ddd](https://github.com/femiadeniyi/femiadeniyi/blob/master/final_edit_FemiTechnology_HD_V4.1.mp4?raw=true)
 
 ## Preferred Tech Stack
 
