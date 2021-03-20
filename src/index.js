@@ -33,7 +33,7 @@ class VideoManager {
 
     mount(){
         var videoToMount = this.elements[this.cursor]
-        var videoToUnmount = this.elements[(this.cursor + 1) % this.videos.length]
+        var videoToUnmount = this.elements[(this.cursor + this.videos.length-1) % this.videos.length]
         videoToMount.style.zIndex = -99;
         videoToUnmount.style.zIndex = -100;
         console.log(videoToMount.style.zIndex, videoToUnmount.style.zIndex, "main should be 99")
@@ -60,15 +60,9 @@ function loadVideo() {
     video.muted = true
 
 
-    return fetch(src).then(f => f.arrayBuffer()).then(f => {
-        return new Promise(resolve => resolveMp4BoxParse(resolve, f))
-    }).then(f => {
-        const mediaSource = new MediaSource
-        video.src = URL.createObjectURL(mediaSource)
-        return new Promise(resolve => {
-            buildVideoFromBuffer(mediaSource, f, resolve)
-        })
-    }).then(f => {
+    return fetch(src).then(f => f.blob()).then(f => {
+        video.src = URL.createObjectURL(f)
+
         var prepareNextVideo = false
         video.ontimeupdate = (t) => {
             if (!prepareNextVideo) {
@@ -95,7 +89,35 @@ function buildVideoFromBuffer(mediaSource, videoBufferObj, resolve) {
         console.log(e, "klop")
         var sourceBuffer = mediaSource.addSourceBuffer(videoBufferObj.codec);
         sourceBuffer.mode = "sequence"
-        sourceBuffer.appendBuffer(videoBufferObj.buff.slice(0))
+
+        const pieces0 = [videoBufferObj.buff.slice(0)];
+        (function appendFragments(pieces) {
+            if (sourceBuffer.updating) {
+                return;
+            }
+            pieces.forEach(piece => {
+                try {
+                    sourceBuffer.appendBuffer(piece);
+                }
+                catch (e) {
+                    if (e.name !== 'QuotaExceededError') {
+                        throw e;
+                    }
+
+                    // Reduction schedule: 80%, 60%, 40%, 20%, 16%, 12%, 8%, 4%, fail.
+                    const reduction = pieces[0].byteLength * 0.8;
+                    if (reduction / pieces0.byteLength < 0.04) {
+                        throw new Error('MediaSource threw QuotaExceededError too many times');
+                    }
+                    const newPieces = [
+                        pieces[0].slice(0, reduction),
+                        pieces[0].slice(reduction, pieces[0].byteLength)
+                    ];
+                    pieces.splice(0, 1, newPieces[0], newPieces[1]);
+                    sourceBuffer.appendBuffer(pieces);
+                }
+            });
+        })(pieces0);
         sourceBuffer.onupdateend = () => {
             mediaSource.endOfStream()
             resolve()
@@ -115,7 +137,7 @@ function mp4Parsed(info) {
     var codecStr = 'video/mp4; codecs="' + codecs.join(', ') + '"';
     console.log(codecStr +
         MediaSource.isTypeSupported(codecStr))
-};
+}
 
 
 async function main() {
