@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://femiadeniyi/./src/index.ts"],"names":[],"mappings":";;;;;;AAAa;AACb;AACA","file":"bundle.js","sourcesContent":["\"use strict\";\r\n$(\"body\").addClass(\"hoop\");\r\nconsole.log(33);\r\n"],"sourceRoot":""}
