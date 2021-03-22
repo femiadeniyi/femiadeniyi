@@ -1,5 +1,6 @@
 // Libs - Jquery, MP4Box
 
+
 var events = {
     dispatchEvent(name, arg) {
         document.dispatchEvent(new CustomEvent(name, {detail: arg}))
@@ -42,8 +43,11 @@ class VideoManager {
 
 }
 
+function clickme() {
+    console.log(33)
+}
 
-var videoManager = new VideoManager(["./femi_dashinit.mp4", "./story_dashinit.mp4", "./racer_dashinit.mp4"])
+var videoManager = new VideoManager(["./femi_comp.mp4", "./story_comp.mp4", "./racer_comp.mp4"])
 const videoIter = videoManager.iter()
 
 videoManager.elements.forEach((f, i) => {

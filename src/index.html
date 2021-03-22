@@ -27,7 +27,23 @@
         }
     </style>
 </head>
+
 <body>
+<script src="eventListeners.js"></script>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+        </div>
+    </div>
+</div>
+<div id="main-container" class="d-flex flex-column" style="height: 100vh">
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-center p-3 text-white font-weight-light" style="font-family: Roboto">
     <div class="container">
@@ -37,36 +53,23 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
             <ul class="navbar-nav justify-content-center me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link h4 text-white" aria-current="page" href="https://femiapps.com">Company</a>
+                    <a class="nav-link h4 text-white" href="javascript:;" onclick="menu.companyClick()">Company</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link h4 dropdown-toggle text-white"  role="button" data-bs-toggle="dropdown" href="#" >Apps</a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                        <li><a class="dropdown-item" href="https://create-invoice.web.app">Create a Invoice</a></li>
-                        <li><hr class="dropdown-divider"></li>
+                <li class="nav-item">
+                    <a class="nav-link h4 text-white" href="javascript:;" onclick="menu.femiAppSeries()">Femi Apps Series</a>
+                </li>
 
-                        <li><a class="dropdown-item disabled" href="#">Twentyone Dating</a></li>
-                    </ul>
-                </li>
             </ul>
-            <div class="d-flex">
-                <ul class="navbar-nav justify-content-center me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link h4 text-white" aria-current="page" href="https://github.com/femiadeniyi">Code</a>
-                    </li>
-                </ul>
-            </div>
         </div>
     </div>
 </nav>
+<iframe id="frame" src="" class="flex-grow-1" style="width: 100vw; height:100vh" frameborder="0"></iframe>
 <div class="position-absolute top-0 bottom-0 start-0 end-0" style="z-index: -50; box-shadow: inset 0px 65px 2px 16px black;">
     <div class="position-absolute text-center" style="top:50%; left: 50%; transform: translate(-50%,-50%); font-family: Montserrat">
 
-    <h1 class="text-light font-weight-bolder display-1" style="    font-weight: 900; text-shadow: 2px 2px black">Femi Adeniyi</h1>
-    <h2 class="text-light mt-4" style="font-family: Raleway; font-weight: 600; text-shadow: 2px 2px black">Actor / Web Developer / Music Producer</h2>
     </div>
+</div>
 </div>
 </body>
 <script src="index.js"></script>
-
 </html>

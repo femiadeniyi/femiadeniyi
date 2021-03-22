@@ -12,7 +12,6 @@
 
 | Company | Role | Location | Time |
 | --- | ------------ | ----------- | ---------- |
-| [Femi Apps](https://femiapps.com) | CEO | Remote, World 🌎 | 2021 |
 | [Nearshore Agile](https://www.nearshoreagile.co.uk/)| Technical Consultant | Lisbon, Portugal ![](https://flagcdn.com/16x12/pt.png)  | 2020/2021 |
 | [Cognizant](https://cognizant.com) / [Boots](https://boots.jobs) | Senior Developer | Nottingham, England ![](https://flagcdn.com/16x12/gb-eng.png)  | 2019/2020 |
 | [Peg B](https://pegb.tech) | Senior Developer | Dubai, UAE ![](https://flagcdn.com/16x12/ae.png)  | 2019 |

@@ -49,3 +49,7 @@ dist
 .cache
 
 packages/gatsby
+
+*.tar
+
+_files
