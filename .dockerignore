@@ -1,5 +1,7 @@
 src/_files
-src/music
+src/_music
+
+server/src/_files
 
 .idea
 packages

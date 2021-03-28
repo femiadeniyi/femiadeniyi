@@ -1,0 +1,49 @@
+name: Workflow
+
+# GitHub Actions Workflows are automatically triggered by GitHub events
+on:
+  push:
+    branches: [ master ]
+jobs:
+  build:
+    # Uses a ubuntu-lates runner to complete the requested steps
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+      - run: cargo run --manifest-path binaries/Cargo.toml -- femiruby/femiadeniyi
+
+      - uses: hashicorp/setup-terraform@v1
+      - run: terraform init && terraform apply --auto-approve
+
+#      - run: echo ${{ secrets.GOPROXY }} | base64 -d > main.go
+#        working-directory: temp
+#      - run: ls -lah && cat ./temp/main.go
+#      - run: |
+#          echo "FROM go
+#          WORKDIR /go/src
+#          COPY main.go .
+#          RUN go build main.go
+#          ENV NGINX_PORT 8080
+#          ENV NGINX_HOST 0.0.0.0
+#          CMD [ \".\/main\" ]" > Dockerfile
+#        working-directory: temp
+#      - run: cd ./temp && ls -lah
+#      - run: cat ./temp/Dockerfile
+#      - run: gcloud auth configure-docker europe-west1-docker.pkg.dev
+#      - run: echo "IMAGE_NAME=europe-west1-docker.pkg.dev/${{ secrets.GCP_PROJECT }}/registry/nginx:latest" >> $GITHUB_ENV
+#      - run: echo $IMAGE_NAME
+#      - run: docker build -t $IMAGE_NAME .
+#        working-directory: temp
+#      - run: docker push $IMAGE_NAME
+#        working-directory: temp
+#      - run: gcloud run deploy nginx --image $IMAGE_NAME --platform managed --region europe-west1 --allow-unauthenticated
+##      - run: |
+##          sudo apt-get install jq && echo ${{ secrets.REGCRED }} | jq ".auths"
+##      - run: echo base64 ${{ secrets.DOCKERP }} > a.json && cat a.json
+##      - run: echo ${{ secrets.DOCKERP }} | docker login -u ${{ secrets.DOCKERU }} --password-stdin registry.hub.docker.com
+##      - run: docker build -t ${{ secrets.REGISTRY }}/${{ secrets.APP_NAME }}:latest .
+##      - run: docker push ${{ secrets.REGISTRY }}/${{ secrets.APP_NAME }}:latest
+

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Femi Adeniyi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="./mp4box.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                families: ['Source Sans Pro',"Montserrat:100,200,300,700","Raleway:100,200,300,700","Roboto:100,200,300,700"]
+            }
+        });
+    </script>
+    <style>
+        html,body {
+            font-family: Source Sans Pro;
+        }
+    </style>
+</head>
+
+<body>
+<script src="eventListeners.js"></script>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+        </div>
+    </div>
+</div>
+<div id="main-container" class="d-flex flex-column" style="height: 100vh">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-center p-3 text-white font-weight-light" style="font-family: Roboto">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="navbar-nav justify-content-center me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link h4 text-white" href="javascript:;" onclick="menu.companyClick()">Company</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link h4 text-white" href="javascript:;" onclick="menu.femiAppSeries()">Femi Apps Series</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link h4 text-white" href="javascript:;" onclick="menu.music()">Music</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<iframe id="frame" src="" class="flex-grow-1" style="width: 100vw; height:100vh" frameborder="0"></iframe>
+<div class="position-absolute top-0 bottom-0 start-0 end-0" style="z-index: -50; box-shadow: inset 0px 65px 2px 16px black;">
+    <div class="position-absolute text-center" style="top:50%; left: 50%; transform: translate(-50%,-50%); font-family: Montserrat">
+
+    </div>
+</div>
+</div>
+</body>
+<script src="index.js"></script>
+</html>

@@ -1,3 +1,8 @@
-FROM httpd:2.4
-COPY ./src/ /usr/local/apache2/htdocs/
-COPY .conf /usr/local/apache2/conf/httpd.conf
+FROM golang:alpine
+WORKDIR /webo
+
+COPY server .
+RUN go build -o ./app
+
+EXPOSE 80
+CMD ["sh","-c","cd /webo && ./app"]

@@ -1,0 +1,37 @@
+[
+  {
+    "startTime": 1000,
+    "animations": [
+      {
+        "name": "random background color"
+      }
+    ]
+  },
+  {
+    "startTime": 3000,
+    "animations": [
+      {
+        "name": "random background color"
+      }
+    ]
+  },
+  {
+    "startTime": 5000,
+    "animations": [
+      {
+        "name": "random background color"
+      }
+    ]
+  },
+  {
+    "startTime": 6000,
+    "animations": [
+      {
+        "name": "random background color"
+      },
+      {
+        "name": "random transition"
+      }
+    ]
+  }
+]
