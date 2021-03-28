@@ -13,7 +13,7 @@ jobs:
       - uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
-      - run: cargo run --manifest-path binaries/Cargo.toml -- femiruby/femiadeniyi
+      - run: cargo run --manifest-path ./binaries/Cargo.toml -- femiruby/femiadeniyi
 
       - uses: hashicorp/setup-terraform@v1
       - run: terraform init && terraform apply --auto-approve
