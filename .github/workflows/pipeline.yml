@@ -8,9 +8,11 @@ jobs:
   build:
     # Uses a ubuntu-lates runner to complete the requested steps
     runs-on: ubuntu-latest
-    env:
-      GOOGLE_APPLICATION_CREDENTIALS: ${{secrets.GOOGLE_APPLICATION_CREDENTIALS}}
     steps:
+      - uses: google-github-actions/setup-gcloud@master
+        with:
+          service_account_key: ${{secrets.GOOGLE_APPLICATION_CREDENTIALS}}
+          export_default_credentials: true
       - uses: actions/checkout@v1
       - uses: actions-rs/toolchain@v1
         with:
