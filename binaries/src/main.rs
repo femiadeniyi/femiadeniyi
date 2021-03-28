@@ -71,7 +71,7 @@ fn main() {
         Some(_version) => _version+1
     };
 
-    let file = File::open("C:\\Software\\femiadeniyi\\main.tf").expect("file not found");
+    let file = File::open("main.tf").expect("file not found");
     let lines = io::BufReader::new(file).lines();
 
     let new_terraform_file = lines.into_iter().fold(String::new(),|acc,x|match x {
