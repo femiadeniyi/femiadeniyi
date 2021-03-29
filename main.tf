@@ -64,7 +64,7 @@ resource "github_actions_secret" "example_secret" {
 resource "github_actions_secret" "google" {
   repository = "femiadeniyi"
   secret_name = "GOOGLE_APPLICATION_CREDENTIALS"
-  plaintext_value = base64encode(var.SERVICE_ACCOUNT)
+  plaintext_value = var.SERVICE_ACCOUNT
 }
 
 resource "github_actions_secret" "docker-username" {
