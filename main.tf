@@ -1,7 +1,3 @@
-
-
-
-
 terraform {
   backend "gcs" {
     bucket = "terraform-state-292"
@@ -11,7 +7,6 @@ terraform {
   required_providers {
     github = {
       source = "integrations/github"
-      version = "~> 4.6.0"
     }
     google-beta = {
       version = "~> 3.61.0"

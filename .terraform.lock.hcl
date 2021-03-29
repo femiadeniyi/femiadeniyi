@@ -76,8 +76,7 @@ provider "registry.terraform.io/hashicorp/null" {
 }
 
 provider "registry.terraform.io/integrations/github" {
-  version     = "4.6.0"
-  constraints = "~> 4.6.0"
+  version = "4.6.0"
   hashes = [
     "h1:13YnLnBrTcaeEoCYvEqEvGEvFUjo42CrQhjUphd/AhE=",
     "zh:22b529f43425a56fa9cc57774f54411a85ed7669bd66616799e119a9e5ddb676",
